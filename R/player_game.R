@@ -13,9 +13,9 @@
 #' @keywords internal
 #' @export
 #' @examples
-#' player_game(697,2016,"MBB")
+#' .player_game(697,2016,"MBB")
 #'
-#' player_game(697,2015,"Womens Soccer")
+#' .player_game(697,2015,"Womens Soccer")
 #'
 
 .player_game <- function(team_id,year,sport){

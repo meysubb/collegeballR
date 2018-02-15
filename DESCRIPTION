@@ -6,7 +6,7 @@ Author: c(person("Meyappan","Subbaiah"),role=c("aut","cre"),email = "meysubb@gma
 Maintainer: Meyappan Subbaiah <meysubb@gmail.com>
 Description: Scrapes NCAA stats for most college sports from stats.ncaa.org
 Depends: 
-  R (>= 3.4.0)
+  R (>= 3.4.3)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -17,4 +17,4 @@ Imports:
   magrittr,
   xml2,
   foreach
-RoxygenNote: 6.0.1
+RoxygenNote: 6.0.1.9000
