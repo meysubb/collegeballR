@@ -7,6 +7,8 @@ vignette: >
   \usepackage[utf8]{inputenc}
 ---
 
+This example will focus on looking at SEC basketball players for 2017-2018. Data is accquired using the `player_stats` function found in `collegeballR`
+
 ```{r,message=FALSE,warning=FALSE}
 library(dplyr)
 library(ggplot2)
@@ -55,13 +57,14 @@ sec_player_df <- sec_player_df %>% mutate(
 )
 
 sec_player_df[,c("FGM","FGA","DRebs","Tot Reb")] <- sapply(sec_player_df[,c("FGM","FGA","DRebs","Tot Reb")],as.numeric)
+head(sec_player_df)
 ```
 
-But for now the data is cleaned and team names are added back. 
+But for now the data is cleaned and team names are added back. Depending on the sport you select the data will look like this, with differing stats recorded. From this you can move on to creating advanced metrics, etc. 
 
 ### Advanced Stats 
 
-Let's calculate usage rate. First we need to calculate team minutes for each team. 
+Let's calculate usage rate. First we need to calculate some team based stats, before calculating USG rate.
 
 ```{r}
 sec_p_df <- sec_player_df %>% group_by(team_name) %>% mutate(
@@ -83,7 +86,7 @@ sec_p_df <- sec_p_df %>% mutate(
 ind_df <- sec_p_df %>% filter(MP>100)
 labels <- ind_df %>% filter(usg_rate>25 & MP > 750)
 ggplot() +
-  geom_point(data = ind_df, aes(y = MP, x = usg_rate, color = team_name)) + theme_bw() +
+  geom_point(data = ind_df, aes(y = MP, x = usg_rate, color = team_name)) + theme_bw(base_size=16) +
   geom_text_repel(data = labels, aes(x = usg_rate, y = MP, label = Player)) +
   facet_wrap(~team_name) + 
   labs(x = "Usage Rate", y = "Minutes", caption = "@msubbaiah1",
@@ -93,3 +96,4 @@ ggplot() +
   
 ```
 
+There is the basics of getting player data from collegeballR! 

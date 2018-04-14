@@ -13,6 +13,23 @@ home:
   - text: Suggestions/Issues
     href: https://github.com/meysubb/collegeballR/issues
 
+navbar:
+  title: "collegeballR"
+  left:
+    - text: "Vignettes"
+      href: articles/index.html
+    - text: "Functions"
+      href: reference/index.html
+    - text: "News"
+      href: news/index.html
+    - text: "Personal Homepage"
+      href: http://meysubb.github.io
+  right:
+   - icon: fa-twitter
+     href: https://twitter.com/msubbaiah1
+   - icon: fa-github
+     href: https://github.com/meysubb/collegeballR
+
 reference:
   - title: Reference Functions/Helpers
     desc:  Functions to identify sport and team id's to use in extraction functions.

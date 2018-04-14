@@ -13,7 +13,7 @@ teams <- team_mapping(2018,"MBB")
 sec <- teams %>% filter(team_name %in% team_names) %>% mutate(
   team_id = as.numeric(team_id)
 )
-
+head(sec)
 sec_player_stats <- sec %>% mutate(
   team_id = as.numeric(team_id),
   player_df = purrr::map(team_id,player_stats,year=2018,sport="MBB")
@@ -33,6 +33,7 @@ sec_player_df <- sec_player_df %>% mutate(
 )
 
 sec_player_df[,c("FGM","FGA","DRebs","Tot Reb")] <- sapply(sec_player_df[,c("FGM","FGA","DRebs","Tot Reb")],as.numeric)
+head(sec_player_df)
 
 ## ------------------------------------------------------------------------
 sec_p_df <- sec_player_df %>% group_by(team_name) %>% mutate(
@@ -50,7 +51,7 @@ sec_p_df <- sec_p_df %>% mutate(
 ind_df <- sec_p_df %>% filter(MP>100)
 labels <- ind_df %>% filter(usg_rate>25 & MP > 750)
 ggplot() +
-  geom_point(data = ind_df, aes(y = MP, x = usg_rate, color = team_name)) + theme_bw() +
+  geom_point(data = ind_df, aes(y = MP, x = usg_rate, color = team_name)) + theme_bw(base_size=16) +
   geom_text_repel(data = labels, aes(x = usg_rate, y = MP, label = Player)) +
   facet_wrap(~team_name) + 
   labs(x = "Usage Rate", y = "Minutes", caption = "@msubbaiah1",
