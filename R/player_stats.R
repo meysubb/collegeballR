@@ -22,5 +22,6 @@ player_stats <- function(team_id,year,sport,by="season"){
   }else{
     stop("Pick Season or Game parameter for Players.")
   }
+  ret_dat$team_id <- team_id
   return(ret_dat)
 }

@@ -31,9 +31,9 @@
   }
   teams <- team_mapping(2016,"MBB")
   t_name <- teams$team_name[which(team_id == teams$team_id)]
-  pb <- txtProgressBar(0, nrow(df), style = 2)
+  #pb <- txtProgressBar(0, nrow(df), style = 2)
   raw_week_df <- foreach(i = 1:nrow(df), .combine='rbind') %do% {
-    setTxtProgressBar(pb, i)
+    #setTxtProgressBar(pb, i)
     team_url <- paste0("http://stats.ncaa.org",df$href[i])
     team_names <- read_html(team_url) %>% html_nodes(".heading td") %>% html_text() %>% trimws()
     ind <- which(team_names == t_name)

@@ -1,0 +1,31 @@
+template:
+  params:
+    bootswatch: cosmo
+
+url: http://meysubb.github.io/collegeballR
+
+authors:
+  Meeyappan Subbaiah:
+  href: https://twitter.com/msubbaiah1
+
+home:
+  links:
+  - text: Suggestions/Issues
+    href: https://github.com/meysubb/collegeballR/issues
+
+reference:
+  - title: Reference Functions/Helpers
+    desc:  Functions to identify sport and team id's to use in extraction functions.
+    contents:
+    - sport_code
+    - team_mapping
+  - title: Data Functions
+    desc: Functions to extract data for a given sport/year/team/players
+    contents:
+    - player_stats
+    - team_stats
+    - team_schedule
+  - title: Data
+    contents:
+    - sport_df
+    - year_df

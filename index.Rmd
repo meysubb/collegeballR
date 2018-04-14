@@ -1,0 +1,42 @@
+---
+title: "index"
+output: html_document
+---
+
+`collegeballR` is a package written for R focusing on college sports analysis. Currently functions accquire data from various sources. Note if you are trying to get baseball data, I would look at Bill Petti's `baseballr` pkg.
+
+### Getting Started 
+
+Take a look at some of the examples found online or in vignettes (to be written).
+
+### Installation
+
+This is not on CRAN, you can install it from github. 
+
+```{r}
+# from github:
+# devtools::install_github("meysubb/collegeballR")
+```
+
+
+### Functionality 
+
+This package should be functional for all sports except for Football. The next update should have full functionality for Football as well.
+
+There are three main functions that provide data of interest:    
+(1) team_stats = Overall team stats (either per season or per game)   
+(2) player_stats = All player stats (either per season or per game)     
+(3) team_schedule = Team Schedule/Result/Site/Record   
+
+For all other functions navigate to the refrence page found online. (add link later)
+
+### Future Work 
+
+I'm looking to add functionality. What you can expect:       
+(1) College Football Functionality.    
+(2) Attendance (per game/season avg)      
+(3) Play by Play data (as available)      
+(4) Weekly Rankings       
+(5) Recruiting Details   
+
+If you'd like to suggest anything (can be sport specific or general), create a github issue. Or tweet at me [@msubbaiah1](https://twitter.com/msubbaiah1).
