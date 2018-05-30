@@ -14,4 +14,4 @@ Install
 
 For additional details please refer to the documentation [site](https://meysubb.github.io/collegeballR/)
 
-If you'd like to suggest anything (can be sport specific or general), create a github issue. Or tweet at me \[@msubbaiah1\](<https://twitter.com/msubbaiah1>).
+If you'd like to suggest anything (can be sport specific or general), create a github issue. Or tweet at me [@msubbaiah1](<https://twitter.com/msubbaiah1>).
