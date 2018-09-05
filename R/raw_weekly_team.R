@@ -29,7 +29,7 @@
   }else{
     stop("There seems to be an issue with the URL accessed, please report as a GH issue")
   }
-  teams <- team_mapping(2016,"MBB")
+  teams <- team_mapping(2016,sport)
   t_name <- teams$team_name[which(team_id == teams$team_id)]
   #pb <- txtProgressBar(0, nrow(df), style = 2)
   raw_week_df <- foreach(i = 1:nrow(df), .combine='rbind') %do% {
