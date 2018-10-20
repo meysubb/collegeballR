@@ -21,15 +21,21 @@
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
 
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Team Name to Team ID Reference — team_mapping" />
 
 <meta property="og:description" content="The NCAA website has a unique identifier for each time in
 each sport. This function references those baesd on name." />
 <meta name="twitter:card" content="summary" />
+
 
 
 <!-- mathjax -->
@@ -39,8 +45,6 @@ each sport. This function references those baesd on name." />
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-
 
 
   </head>
@@ -108,10 +112,12 @@ each sport. This function references those baesd on name." />
     <div class="hidden name"><code>team_mapping.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>The NCAA website has a unique identifier for each time in
 each sport. This function references those baesd on name.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>team_mapping</span>(<span class='no'>yr</span>, <span class='no'>sprt</span>)</pre>
     
@@ -131,1008 +137,1042 @@ each sport. This function references those baesd on name.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>team_mapping</span>(<span class='fl'>2015</span>,<span class='st'>"Men's Basketball"</span>)</div><div class='output co'>#&gt;     team_id            team_name year
-#&gt; 4     26172   A&amp;M-Corpus Christi 2015
-#&gt; 5         2    Abilene Christian 2015
-#&gt; 6       721            Air Force 2015
-#&gt; 7         5                Akron 2015
-#&gt; 8         8              Alabama 2015
-#&gt; 9         6          Alabama A&amp;M 2015
-#&gt; 10        7          Alabama St. 2015
-#&gt; 11       14          Albany (NY) 2015
-#&gt; 12       17               Alcorn 2015
-#&gt; 13       23             American 2015
-#&gt; 14       27      Appalachian St. 2015
-#&gt; 15       29              Arizona 2015
-#&gt; 16       28          Arizona St. 2015
-#&gt; 17     2678      Ark.-Pine Bluff 2015
-#&gt; 18       31             Arkansas 2015
-#&gt; 19       30         Arkansas St. 2015
-#&gt; 20      725      Army West Point 2015
-#&gt; 21       37               Auburn 2015
-#&gt; 22       43          Austin Peay 2015
-#&gt; 23       77                  BYU 2015
-#&gt; 24       47             Ball St. 2015
-#&gt; 25       51               Baylor 2015
-#&gt; 26    14927              Belmont 2015
-#&gt; 27       61      Bethune-Cookman 2015
-#&gt; 28       62           Binghamton 2015
-#&gt; 29       66            Boise St. 2015
-#&gt; 30       67       Boston College 2015
-#&gt; 31       68            Boston U. 2015
-#&gt; 32       71        Bowling Green 2015
-#&gt; 33       72              Bradley 2015
-#&gt; 34       80                Brown 2015
-#&gt; 35       81               Bryant 2015
-#&gt; 36       83             Bucknell 2015
-#&gt; 37       86              Buffalo 2015
-#&gt; 38       87               Butler 2015
-#&gt; 39       94      CSU Bakersfield 2015
-#&gt; 40      101                 CSUN 2015
-#&gt; 41       90             Cal Poly 2015
-#&gt; 42       97    Cal St. Fullerton 2015
-#&gt; 43      107           California 2015
-#&gt; 44      115             Campbell 2015
-#&gt; 45      116             Canisius 2015
-#&gt; 46     1004         Central Ark. 2015
-#&gt; 47      127    Central Conn. St. 2015
-#&gt; 48      129        Central Mich. 2015
-#&gt; 49       48       Charleston So. 2015
-#&gt; 50      458            Charlotte 2015
-#&gt; 51      693          Chattanooga 2015
-#&gt; 52      136          Chicago St. 2015
-#&gt; 53      140           Cincinnati 2015
-#&gt; 54      147              Clemson 2015
-#&gt; 55      148        Cleveland St. 2015
-#&gt; 56      149        Coastal Caro. 2015
-#&gt; 57     1014   Col. of Charleston 2015
-#&gt; 58      153              Colgate 2015
-#&gt; 59      157             Colorado 2015
-#&gt; 60      156         Colorado St. 2015
-#&gt; 61      158             Columbia 2015
-#&gt; 62      165           Coppin St. 2015
-#&gt; 63      167              Cornell 2015
-#&gt; 64      169            Creighton 2015
-#&gt; 65      172            Dartmouth 2015
-#&gt; 66      173             Davidson 2015
-#&gt; 67      175               Dayton 2015
-#&gt; 68      176               DePaul 2015
-#&gt; 69      180             Delaware 2015
-#&gt; 70      178         Delaware St. 2015
-#&gt; 71      183               Denver 2015
-#&gt; 72      184        Detroit Mercy 2015
-#&gt; 73      189                Drake 2015
-#&gt; 74      191               Drexel 2015
-#&gt; 75      193                 Duke 2015
-#&gt; 76      194             Duquesne 2015
-#&gt; 77      198                 ETSU 2015
-#&gt; 78      196        East Carolina 2015
-#&gt; 79      201         Eastern Ill. 2015
-#&gt; 80      202          Eastern Ky. 2015
-#&gt; 81      204        Eastern Mich. 2015
-#&gt; 82      207        Eastern Wash. 2015
-#&gt; 83     1068                 Elon 2015
-#&gt; 84      219           Evansville 2015
-#&gt; 85    28755                 FGCU 2015
-#&gt; 86      231                  FIU 2015
-#&gt; 87      220            Fairfield 2015
-#&gt; 88      222  Fairleigh Dickinson 2015
-#&gt; 89      229        Fla. Atlantic 2015
-#&gt; 90      235              Florida 2015
-#&gt; 91      228          Florida A&amp;M 2015
-#&gt; 92      234          Florida St. 2015
-#&gt; 93      236              Fordham 2015
-#&gt; 94      308           Fort Wayne 2015
-#&gt; 95       96           Fresno St. 2015
-#&gt; 96      244               Furman 2015
-#&gt; 97      253         Ga. Southern 2015
-#&gt; 98     1092         Gardner-Webb 2015
-#&gt; 99      248         George Mason 2015
-#&gt; 100     249    George Washington 2015
-#&gt; 101     251           Georgetown 2015
-#&gt; 102     257              Georgia 2015
-#&gt; 103     254          Georgia St. 2015
-#&gt; 104     255         Georgia Tech 2015
-#&gt; 105     260              Gonzaga 2015
-#&gt; 106     261            Grambling 2015
-#&gt; 107    1104         Grand Canyon 2015
-#&gt; 108     794            Green Bay 2015
-#&gt; 109     270              Hampton 2015
-#&gt; 110     272             Hartford 2015
-#&gt; 111     275              Harvard 2015
-#&gt; 112     277               Hawaii 2015
-#&gt; 113   19651           High Point 2015
-#&gt; 114     283              Hofstra 2015
-#&gt; 115     285           Holy Cross 2015
-#&gt; 116     288              Houston 2015
-#&gt; 117     287      Houston Baptist 2015
-#&gt; 118     290               Howard 2015
-#&gt; 119    2699                IUPUI 2015
-#&gt; 120     295                Idaho 2015
-#&gt; 121     294            Idaho St. 2015
-#&gt; 122     302         Ill.-Chicago 2015
-#&gt; 123     301             Illinois 2015
-#&gt; 124     299         Illinois St. 2015
-#&gt; 125    2743       Incarnate Word 2015
-#&gt; 126     306              Indiana 2015
-#&gt; 127     305          Indiana St. 2015
-#&gt; 128     310                 Iona 2015
-#&gt; 129     312                 Iowa 2015
-#&gt; 130     311             Iowa St. 2015
-#&gt; 131     314          Jackson St. 2015
-#&gt; 132     316         Jacksonville 2015
-#&gt; 133     315     Jacksonville St. 2015
-#&gt; 134     317        James Madison 2015
-#&gt; 135     328               Kansas 2015
-#&gt; 136     327           Kansas St. 2015
-#&gt; 137    1157         Kennesaw St. 2015
-#&gt; 138     331             Kent St. 2015
-#&gt; 139     334             Kentucky 2015
-#&gt; 140     361         LIU Brooklyn 2015
-#&gt; 141     365                  LSU 2015
-#&gt; 142     340             La Salle 2015
-#&gt; 143     498           La.-Monroe 2015
-#&gt; 144     342            Lafayette 2015
-#&gt; 145     346     Lamar University 2015
-#&gt; 146     352               Lehigh 2015
-#&gt; 147     355              Liberty 2015
-#&gt; 148   28600             Lipscomb 2015
-#&gt; 149      32          Little Rock 2015
-#&gt; 150      99       Long Beach St. 2015
-#&gt; 151     363             Longwood 2015
-#&gt; 152     671            Louisiana 2015
-#&gt; 153     366       Louisiana Tech 2015
-#&gt; 154     367           Louisville 2015
-#&gt; 155     371       Loyola Chicago 2015
-#&gt; 156     369      Loyola Maryland 2015
-#&gt; 157     370     Loyola Marymount 2015
-#&gt; 158     380                Maine 2015
-#&gt; 159     381            Manhattan 2015
-#&gt; 160     386               Marist 2015
-#&gt; 161     387            Marquette 2015
-#&gt; 162     388             Marshall 2015
-#&gt; 163     392             Maryland 2015
-#&gt; 164     400        Massachusetts 2015
-#&gt; 165     402              McNeese 2015
-#&gt; 166     404              Memphis 2015
-#&gt; 167     406               Mercer 2015
-#&gt; 168     415           Miami (FL) 2015
-#&gt; 169     414           Miami (OH) 2015
-#&gt; 170     418             Michigan 2015
-#&gt; 171     416         Michigan St. 2015
-#&gt; 172     419         Middle Tenn. 2015
-#&gt; 173     797            Milwaukee 2015
-#&gt; 174     428            Minnesota 2015
-#&gt; 175     430      Mississippi St. 2015
-#&gt; 176     432     Mississippi Val. 2015
-#&gt; 177     434             Missouri 2015
-#&gt; 178     669         Missouri St. 2015
-#&gt; 179     439             Monmouth 2015
-#&gt; 180     441              Montana 2015
-#&gt; 181     440          Montana St. 2015
-#&gt; 182     444         Morehead St. 2015
-#&gt; 183     446           Morgan St. 2015
-#&gt; 184     450       Mt. St. Mary's 2015
-#&gt; 185     454           Murray St. 2015
-#&gt; 186     488             N.C. A&amp;T 2015
-#&gt; 187     489         N.C. Central 2015
-#&gt; 188     490             NC State 2015
-#&gt; 189     471                 NJIT 2015
-#&gt; 190     726                 Navy 2015
-#&gt; 191     463             Nebraska 2015
-#&gt; 192     466               Nevada 2015
-#&gt; 193     469        New Hampshire 2015
-#&gt; 194     473           New Mexico 2015
-#&gt; 195     472       New Mexico St. 2015
-#&gt; 196     474          New Orleans 2015
-#&gt; 197     482              Niagara 2015
-#&gt; 198     483         Nicholls St. 2015
-#&gt; 199     485          Norfolk St. 2015
-#&gt; 200     457       North Carolina 2015
-#&gt; 201     494         North Dakota 2015
-#&gt; 202     493     North Dakota St. 2015
-#&gt; 203    2711        North Florida 2015
-#&gt; 204     497          North Texas 2015
-#&gt; 205     500         Northeastern 2015
-#&gt; 206     501       Northern Ariz. 2015
-#&gt; 207     502       Northern Colo. 2015
-#&gt; 208     503        Northern Ill. 2015
-#&gt; 209     505         Northern Ky. 2015
-#&gt; 210     509         Northwestern 2015
-#&gt; 211     508     Northwestern St. 2015
-#&gt; 212     513           Notre Dame 2015
-#&gt; 213     514              Oakland 2015
-#&gt; 214     519                 Ohio 2015
-#&gt; 215     518             Ohio St. 2015
-#&gt; 216     522             Oklahoma 2015
-#&gt; 217     521         Oklahoma St. 2015
-#&gt; 218     523         Old Dominion 2015
-#&gt; 219     433             Ole Miss 2015
-#&gt; 220     464                Omaha 2015
-#&gt; 221     527         Oral Roberts 2015
-#&gt; 222     529               Oregon 2015
-#&gt; 223     528           Oregon St. 2015
-#&gt; 224     534              Pacific 2015
-#&gt; 225     540                 Penn 2015
-#&gt; 226     539             Penn St. 2015
-#&gt; 227     541           Pepperdine 2015
-#&gt; 228     545           Pittsburgh 2015
-#&gt; 229     551             Portland 2015
-#&gt; 230     550         Portland St. 2015
-#&gt; 231     553         Prairie View 2015
-#&gt; 232    1320         Presbyterian 2015
-#&gt; 233     554            Princeton 2015
-#&gt; 234     556           Providence 2015
-#&gt; 235     559               Purdue 2015
-#&gt; 236     562           Quinnipiac 2015
-#&gt; 237     563              Radford 2015
-#&gt; 238     572         Rhode Island 2015
-#&gt; 239     574                 Rice 2015
-#&gt; 240     575             Richmond 2015
-#&gt; 241     576                Rider 2015
-#&gt; 242     579        Robert Morris 2015
-#&gt; 243     587              Rutgers 2015
-#&gt; 244     676                  SFA 2015
-#&gt; 245     660                 SIUE 2015
-#&gt; 246     663                  SMU 2015
-#&gt; 247     102       Sacramento St. 2015
-#&gt; 248     590         Sacred Heart 2015
-#&gt; 249     600   Saint Francis (PA) 2015
-#&gt; 250     606       Saint Joseph's 2015
-#&gt; 251     609          Saint Louis 2015
-#&gt; 252     610    Saint Mary's (CA) 2015
-#&gt; 253     617        Saint Peter's 2015
-#&gt; 254     624      Sam Houston St. 2015
-#&gt; 255     625              Samford 2015
-#&gt; 256     627            San Diego 2015
-#&gt; 257     626        San Diego St. 2015
-#&gt; 258     629        San Francisco 2015
-#&gt; 259     630         San Jose St. 2015
-#&gt; 260     631          Santa Clara 2015
-#&gt; 261     632         Savannah St. 2015
-#&gt; 262    1356            Seattle U 2015
-#&gt; 263     635           Seton Hall 2015
-#&gt; 264     639                Siena 2015
-#&gt; 265     646           South Ala. 2015
-#&gt; 266     648       South Carolina 2015
-#&gt; 267     647   South Carolina St. 2015
-#&gt; 268     650         South Dakota 2015
-#&gt; 269     649     South Dakota St. 2015
-#&gt; 270     651           South Fla. 2015
-#&gt; 271     654    Southeast Mo. St. 2015
-#&gt; 272     655     Southeastern La. 2015
-#&gt; 273     657  Southern California 2015
-#&gt; 274     659        Southern Ill. 2015
-#&gt; 275     664       Southern Miss. 2015
-#&gt; 276     665          Southern U. 2015
-#&gt; 277     667        Southern Utah 2015
-#&gt; 278     596      St. Bonaventure 2015
-#&gt; 279     599 St. Francis Brooklyn 2015
-#&gt; 280     603      St. John's (NY) 2015
-#&gt; 281     674             Stanford 2015
-#&gt; 282     678              Stetson 2015
-#&gt; 283     683          Stony Brook 2015
-#&gt; 284     688             Syracuse 2015
-#&gt; 285     698                  TCU 2015
-#&gt; 286     690               Temple 2015
-#&gt; 287     694            Tennessee 2015
-#&gt; 288     691        Tennessee St. 2015
-#&gt; 289     692       Tennessee Tech 2015
-#&gt; 290     703                Texas 2015
-#&gt; 291     697            Texas A&amp;M 2015
-#&gt; 292     699       Texas Southern 2015
-#&gt; 293     670            Texas St. 2015
-#&gt; 294     700           Texas Tech 2015
-#&gt; 295     141          The Citadel 2015
-#&gt; 296     709               Toledo 2015
-#&gt; 297     711               Towson 2015
-#&gt; 298     716                 Troy 2015
-#&gt; 299     718               Tulane 2015
-#&gt; 300     719                Tulsa 2015
-#&gt; 301       9                  UAB 2015
-#&gt; 302     108             UC Davis 2015
-#&gt; 303     109            UC Irvine 2015
-#&gt; 304     111         UC Riverside 2015
-#&gt; 305     104     UC Santa Barbara 2015
-#&gt; 306     128                  UCF 2015
-#&gt; 307     110                 UCLA 2015
-#&gt; 308     164                UConn 2015
-#&gt; 309     391                 UMBC 2015
-#&gt; 310     393                 UMES 2015
-#&gt; 311    2707                 UMKC 2015
-#&gt; 312     368         UMass Lowell 2015
-#&gt; 313     456        UNC Asheville 2015
-#&gt; 314     459                 UNCG 2015
-#&gt; 315     460                 UNCW 2015
-#&gt; 316     504                  UNI 2015
-#&gt; 317     465                 UNLV 2015
-#&gt; 318   10411          USC Upstate 2015
-#&gt; 319     702         UT Arlington 2015
-#&gt; 320     695            UT Martin 2015
-#&gt; 321     704                 UTEP 2015
-#&gt; 322     536                UTRGV 2015
-#&gt; 323     706                 UTSA 2015
-#&gt; 324     732                 Utah 2015
-#&gt; 325     731             Utah St. 2015
-#&gt; 326   30024          Utah Valley 2015
-#&gt; 327     740                  VCU 2015
-#&gt; 328     741                  VMI 2015
-#&gt; 329     735           Valparaiso 2015
-#&gt; 330     736           Vanderbilt 2015
-#&gt; 331     738              Vermont 2015
-#&gt; 332     739            Villanova 2015
-#&gt; 333     746             Virginia 2015
-#&gt; 334     742        Virginia Tech 2015
-#&gt; 335     748               Wagner 2015
-#&gt; 336     749          Wake Forest 2015
-#&gt;  [ reached getOption("max.print") -- omitted 18 rows ]</div><div class='input'><span class='fu'>team_mapping</span>(<span class='fl'>2015</span>,<span class='st'>"MBB"</span>)</div><div class='output co'>#&gt;     team_id            team_name year
-#&gt; 4     26172   A&amp;M-Corpus Christi 2015
-#&gt; 5         2    Abilene Christian 2015
-#&gt; 6       721            Air Force 2015
-#&gt; 7         5                Akron 2015
-#&gt; 8         8              Alabama 2015
-#&gt; 9         6          Alabama A&amp;M 2015
-#&gt; 10        7          Alabama St. 2015
-#&gt; 11       14          Albany (NY) 2015
-#&gt; 12       17               Alcorn 2015
-#&gt; 13       23             American 2015
-#&gt; 14       27      Appalachian St. 2015
-#&gt; 15       29              Arizona 2015
-#&gt; 16       28          Arizona St. 2015
-#&gt; 17     2678      Ark.-Pine Bluff 2015
-#&gt; 18       31             Arkansas 2015
-#&gt; 19       30         Arkansas St. 2015
-#&gt; 20      725      Army West Point 2015
-#&gt; 21       37               Auburn 2015
-#&gt; 22       43          Austin Peay 2015
-#&gt; 23       77                  BYU 2015
-#&gt; 24       47             Ball St. 2015
-#&gt; 25       51               Baylor 2015
-#&gt; 26    14927              Belmont 2015
-#&gt; 27       61      Bethune-Cookman 2015
-#&gt; 28       62           Binghamton 2015
-#&gt; 29       66            Boise St. 2015
-#&gt; 30       67       Boston College 2015
-#&gt; 31       68            Boston U. 2015
-#&gt; 32       71        Bowling Green 2015
-#&gt; 33       72              Bradley 2015
-#&gt; 34       80                Brown 2015
-#&gt; 35       81               Bryant 2015
-#&gt; 36       83             Bucknell 2015
-#&gt; 37       86              Buffalo 2015
-#&gt; 38       87               Butler 2015
-#&gt; 39       94      CSU Bakersfield 2015
-#&gt; 40      101                 CSUN 2015
-#&gt; 41       90             Cal Poly 2015
-#&gt; 42       97    Cal St. Fullerton 2015
-#&gt; 43      107           California 2015
-#&gt; 44      115             Campbell 2015
-#&gt; 45      116             Canisius 2015
-#&gt; 46     1004         Central Ark. 2015
-#&gt; 47      127    Central Conn. St. 2015
-#&gt; 48      129        Central Mich. 2015
-#&gt; 49       48       Charleston So. 2015
-#&gt; 50      458            Charlotte 2015
-#&gt; 51      693          Chattanooga 2015
-#&gt; 52      136          Chicago St. 2015
-#&gt; 53      140           Cincinnati 2015
-#&gt; 54      147              Clemson 2015
-#&gt; 55      148        Cleveland St. 2015
-#&gt; 56      149        Coastal Caro. 2015
-#&gt; 57     1014   Col. of Charleston 2015
-#&gt; 58      153              Colgate 2015
-#&gt; 59      157             Colorado 2015
-#&gt; 60      156         Colorado St. 2015
-#&gt; 61      158             Columbia 2015
-#&gt; 62      165           Coppin St. 2015
-#&gt; 63      167              Cornell 2015
-#&gt; 64      169            Creighton 2015
-#&gt; 65      172            Dartmouth 2015
-#&gt; 66      173             Davidson 2015
-#&gt; 67      175               Dayton 2015
-#&gt; 68      176               DePaul 2015
-#&gt; 69      180             Delaware 2015
-#&gt; 70      178         Delaware St. 2015
-#&gt; 71      183               Denver 2015
-#&gt; 72      184        Detroit Mercy 2015
-#&gt; 73      189                Drake 2015
-#&gt; 74      191               Drexel 2015
-#&gt; 75      193                 Duke 2015
-#&gt; 76      194             Duquesne 2015
-#&gt; 77      198                 ETSU 2015
-#&gt; 78      196        East Carolina 2015
-#&gt; 79      201         Eastern Ill. 2015
-#&gt; 80      202          Eastern Ky. 2015
-#&gt; 81      204        Eastern Mich. 2015
-#&gt; 82      207        Eastern Wash. 2015
-#&gt; 83     1068                 Elon 2015
-#&gt; 84      219           Evansville 2015
-#&gt; 85    28755                 FGCU 2015
-#&gt; 86      231                  FIU 2015
-#&gt; 87      220            Fairfield 2015
-#&gt; 88      222  Fairleigh Dickinson 2015
-#&gt; 89      229        Fla. Atlantic 2015
-#&gt; 90      235              Florida 2015
-#&gt; 91      228          Florida A&amp;M 2015
-#&gt; 92      234          Florida St. 2015
-#&gt; 93      236              Fordham 2015
-#&gt; 94      308           Fort Wayne 2015
-#&gt; 95       96           Fresno St. 2015
-#&gt; 96      244               Furman 2015
-#&gt; 97      253         Ga. Southern 2015
-#&gt; 98     1092         Gardner-Webb 2015
-#&gt; 99      248         George Mason 2015
-#&gt; 100     249    George Washington 2015
-#&gt; 101     251           Georgetown 2015
-#&gt; 102     257              Georgia 2015
-#&gt; 103     254          Georgia St. 2015
-#&gt; 104     255         Georgia Tech 2015
-#&gt; 105     260              Gonzaga 2015
-#&gt; 106     261            Grambling 2015
-#&gt; 107    1104         Grand Canyon 2015
-#&gt; 108     794            Green Bay 2015
-#&gt; 109     270              Hampton 2015
-#&gt; 110     272             Hartford 2015
-#&gt; 111     275              Harvard 2015
-#&gt; 112     277               Hawaii 2015
-#&gt; 113   19651           High Point 2015
-#&gt; 114     283              Hofstra 2015
-#&gt; 115     285           Holy Cross 2015
-#&gt; 116     288              Houston 2015
-#&gt; 117     287      Houston Baptist 2015
-#&gt; 118     290               Howard 2015
-#&gt; 119    2699                IUPUI 2015
-#&gt; 120     295                Idaho 2015
-#&gt; 121     294            Idaho St. 2015
-#&gt; 122     302         Ill.-Chicago 2015
-#&gt; 123     301             Illinois 2015
-#&gt; 124     299         Illinois St. 2015
-#&gt; 125    2743       Incarnate Word 2015
-#&gt; 126     306              Indiana 2015
-#&gt; 127     305          Indiana St. 2015
-#&gt; 128     310                 Iona 2015
-#&gt; 129     312                 Iowa 2015
-#&gt; 130     311             Iowa St. 2015
-#&gt; 131     314          Jackson St. 2015
-#&gt; 132     316         Jacksonville 2015
-#&gt; 133     315     Jacksonville St. 2015
-#&gt; 134     317        James Madison 2015
-#&gt; 135     328               Kansas 2015
-#&gt; 136     327           Kansas St. 2015
-#&gt; 137    1157         Kennesaw St. 2015
-#&gt; 138     331             Kent St. 2015
-#&gt; 139     334             Kentucky 2015
-#&gt; 140     361         LIU Brooklyn 2015
-#&gt; 141     365                  LSU 2015
-#&gt; 142     340             La Salle 2015
-#&gt; 143     498           La.-Monroe 2015
-#&gt; 144     342            Lafayette 2015
-#&gt; 145     346     Lamar University 2015
-#&gt; 146     352               Lehigh 2015
-#&gt; 147     355              Liberty 2015
-#&gt; 148   28600             Lipscomb 2015
-#&gt; 149      32          Little Rock 2015
-#&gt; 150      99       Long Beach St. 2015
-#&gt; 151     363             Longwood 2015
-#&gt; 152     671            Louisiana 2015
-#&gt; 153     366       Louisiana Tech 2015
-#&gt; 154     367           Louisville 2015
-#&gt; 155     371       Loyola Chicago 2015
-#&gt; 156     369      Loyola Maryland 2015
-#&gt; 157     370     Loyola Marymount 2015
-#&gt; 158     380                Maine 2015
-#&gt; 159     381            Manhattan 2015
-#&gt; 160     386               Marist 2015
-#&gt; 161     387            Marquette 2015
-#&gt; 162     388             Marshall 2015
-#&gt; 163     392             Maryland 2015
-#&gt; 164     400        Massachusetts 2015
-#&gt; 165     402              McNeese 2015
-#&gt; 166     404              Memphis 2015
-#&gt; 167     406               Mercer 2015
-#&gt; 168     415           Miami (FL) 2015
-#&gt; 169     414           Miami (OH) 2015
-#&gt; 170     418             Michigan 2015
-#&gt; 171     416         Michigan St. 2015
-#&gt; 172     419         Middle Tenn. 2015
-#&gt; 173     797            Milwaukee 2015
-#&gt; 174     428            Minnesota 2015
-#&gt; 175     430      Mississippi St. 2015
-#&gt; 176     432     Mississippi Val. 2015
-#&gt; 177     434             Missouri 2015
-#&gt; 178     669         Missouri St. 2015
-#&gt; 179     439             Monmouth 2015
-#&gt; 180     441              Montana 2015
-#&gt; 181     440          Montana St. 2015
-#&gt; 182     444         Morehead St. 2015
-#&gt; 183     446           Morgan St. 2015
-#&gt; 184     450       Mt. St. Mary's 2015
-#&gt; 185     454           Murray St. 2015
-#&gt; 186     488             N.C. A&amp;T 2015
-#&gt; 187     489         N.C. Central 2015
-#&gt; 188     490             NC State 2015
-#&gt; 189     471                 NJIT 2015
-#&gt; 190     726                 Navy 2015
-#&gt; 191     463             Nebraska 2015
-#&gt; 192     466               Nevada 2015
-#&gt; 193     469        New Hampshire 2015
-#&gt; 194     473           New Mexico 2015
-#&gt; 195     472       New Mexico St. 2015
-#&gt; 196     474          New Orleans 2015
-#&gt; 197     482              Niagara 2015
-#&gt; 198     483         Nicholls St. 2015
-#&gt; 199     485          Norfolk St. 2015
-#&gt; 200     457       North Carolina 2015
-#&gt; 201     494         North Dakota 2015
-#&gt; 202     493     North Dakota St. 2015
-#&gt; 203    2711        North Florida 2015
-#&gt; 204     497          North Texas 2015
-#&gt; 205     500         Northeastern 2015
-#&gt; 206     501       Northern Ariz. 2015
-#&gt; 207     502       Northern Colo. 2015
-#&gt; 208     503        Northern Ill. 2015
-#&gt; 209     505         Northern Ky. 2015
-#&gt; 210     509         Northwestern 2015
-#&gt; 211     508     Northwestern St. 2015
-#&gt; 212     513           Notre Dame 2015
-#&gt; 213     514              Oakland 2015
-#&gt; 214     519                 Ohio 2015
-#&gt; 215     518             Ohio St. 2015
-#&gt; 216     522             Oklahoma 2015
-#&gt; 217     521         Oklahoma St. 2015
-#&gt; 218     523         Old Dominion 2015
-#&gt; 219     433             Ole Miss 2015
-#&gt; 220     464                Omaha 2015
-#&gt; 221     527         Oral Roberts 2015
-#&gt; 222     529               Oregon 2015
-#&gt; 223     528           Oregon St. 2015
-#&gt; 224     534              Pacific 2015
-#&gt; 225     540                 Penn 2015
-#&gt; 226     539             Penn St. 2015
-#&gt; 227     541           Pepperdine 2015
-#&gt; 228     545           Pittsburgh 2015
-#&gt; 229     551             Portland 2015
-#&gt; 230     550         Portland St. 2015
-#&gt; 231     553         Prairie View 2015
-#&gt; 232    1320         Presbyterian 2015
-#&gt; 233     554            Princeton 2015
-#&gt; 234     556           Providence 2015
-#&gt; 235     559               Purdue 2015
-#&gt; 236     562           Quinnipiac 2015
-#&gt; 237     563              Radford 2015
-#&gt; 238     572         Rhode Island 2015
-#&gt; 239     574                 Rice 2015
-#&gt; 240     575             Richmond 2015
-#&gt; 241     576                Rider 2015
-#&gt; 242     579        Robert Morris 2015
-#&gt; 243     587              Rutgers 2015
-#&gt; 244     676                  SFA 2015
-#&gt; 245     660                 SIUE 2015
-#&gt; 246     663                  SMU 2015
-#&gt; 247     102       Sacramento St. 2015
-#&gt; 248     590         Sacred Heart 2015
-#&gt; 249     600   Saint Francis (PA) 2015
-#&gt; 250     606       Saint Joseph's 2015
-#&gt; 251     609          Saint Louis 2015
-#&gt; 252     610    Saint Mary's (CA) 2015
-#&gt; 253     617        Saint Peter's 2015
-#&gt; 254     624      Sam Houston St. 2015
-#&gt; 255     625              Samford 2015
-#&gt; 256     627            San Diego 2015
-#&gt; 257     626        San Diego St. 2015
-#&gt; 258     629        San Francisco 2015
-#&gt; 259     630         San Jose St. 2015
-#&gt; 260     631          Santa Clara 2015
-#&gt; 261     632         Savannah St. 2015
-#&gt; 262    1356            Seattle U 2015
-#&gt; 263     635           Seton Hall 2015
-#&gt; 264     639                Siena 2015
-#&gt; 265     646           South Ala. 2015
-#&gt; 266     648       South Carolina 2015
-#&gt; 267     647   South Carolina St. 2015
-#&gt; 268     650         South Dakota 2015
-#&gt; 269     649     South Dakota St. 2015
-#&gt; 270     651           South Fla. 2015
-#&gt; 271     654    Southeast Mo. St. 2015
-#&gt; 272     655     Southeastern La. 2015
-#&gt; 273     657  Southern California 2015
-#&gt; 274     659        Southern Ill. 2015
-#&gt; 275     664       Southern Miss. 2015
-#&gt; 276     665          Southern U. 2015
-#&gt; 277     667        Southern Utah 2015
-#&gt; 278     596      St. Bonaventure 2015
-#&gt; 279     599 St. Francis Brooklyn 2015
-#&gt; 280     603      St. John's (NY) 2015
-#&gt; 281     674             Stanford 2015
-#&gt; 282     678              Stetson 2015
-#&gt; 283     683          Stony Brook 2015
-#&gt; 284     688             Syracuse 2015
-#&gt; 285     698                  TCU 2015
-#&gt; 286     690               Temple 2015
-#&gt; 287     694            Tennessee 2015
-#&gt; 288     691        Tennessee St. 2015
-#&gt; 289     692       Tennessee Tech 2015
-#&gt; 290     703                Texas 2015
-#&gt; 291     697            Texas A&amp;M 2015
-#&gt; 292     699       Texas Southern 2015
-#&gt; 293     670            Texas St. 2015
-#&gt; 294     700           Texas Tech 2015
-#&gt; 295     141          The Citadel 2015
-#&gt; 296     709               Toledo 2015
-#&gt; 297     711               Towson 2015
-#&gt; 298     716                 Troy 2015
-#&gt; 299     718               Tulane 2015
-#&gt; 300     719                Tulsa 2015
-#&gt; 301       9                  UAB 2015
-#&gt; 302     108             UC Davis 2015
-#&gt; 303     109            UC Irvine 2015
-#&gt; 304     111         UC Riverside 2015
-#&gt; 305     104     UC Santa Barbara 2015
-#&gt; 306     128                  UCF 2015
-#&gt; 307     110                 UCLA 2015
-#&gt; 308     164                UConn 2015
-#&gt; 309     391                 UMBC 2015
-#&gt; 310     393                 UMES 2015
-#&gt; 311    2707                 UMKC 2015
-#&gt; 312     368         UMass Lowell 2015
-#&gt; 313     456        UNC Asheville 2015
-#&gt; 314     459                 UNCG 2015
-#&gt; 315     460                 UNCW 2015
-#&gt; 316     504                  UNI 2015
-#&gt; 317     465                 UNLV 2015
-#&gt; 318   10411          USC Upstate 2015
-#&gt; 319     702         UT Arlington 2015
-#&gt; 320     695            UT Martin 2015
-#&gt; 321     704                 UTEP 2015
-#&gt; 322     536                UTRGV 2015
-#&gt; 323     706                 UTSA 2015
-#&gt; 324     732                 Utah 2015
-#&gt; 325     731             Utah St. 2015
-#&gt; 326   30024          Utah Valley 2015
-#&gt; 327     740                  VCU 2015
-#&gt; 328     741                  VMI 2015
-#&gt; 329     735           Valparaiso 2015
-#&gt; 330     736           Vanderbilt 2015
-#&gt; 331     738              Vermont 2015
-#&gt; 332     739            Villanova 2015
-#&gt; 333     746             Virginia 2015
-#&gt; 334     742        Virginia Tech 2015
-#&gt; 335     748               Wagner 2015
-#&gt; 336     749          Wake Forest 2015
-#&gt;  [ reached getOption("max.print") -- omitted 18 rows ]</div><div class='input'>
+#&gt; 3     26172   A&amp;M-Corpus Christi 2015
+#&gt; 4         2    Abilene Christian 2015
+#&gt; 5       721            Air Force 2015
+#&gt; 6         5                Akron 2015
+#&gt; 7         8              Alabama 2015
+#&gt; 8         6          Alabama A&amp;M 2015
+#&gt; 9         7          Alabama St. 2015
+#&gt; 10       14          Albany (NY) 2015
+#&gt; 11       17               Alcorn 2015
+#&gt; 12       23             American 2015
+#&gt; 13       27      Appalachian St. 2015
+#&gt; 14       29              Arizona 2015
+#&gt; 15       28          Arizona St. 2015
+#&gt; 16     2678      Ark.-Pine Bluff 2015
+#&gt; 17       31             Arkansas 2015
+#&gt; 18       30         Arkansas St. 2015
+#&gt; 19      725      Army West Point 2015
+#&gt; 20       37               Auburn 2015
+#&gt; 21       43          Austin Peay 2015
+#&gt; 22       77                  BYU 2015
+#&gt; 23       47             Ball St. 2015
+#&gt; 24       51               Baylor 2015
+#&gt; 25    14927              Belmont 2015
+#&gt; 26       61      Bethune-Cookman 2015
+#&gt; 27       62           Binghamton 2015
+#&gt; 28       66            Boise St. 2015
+#&gt; 29       67       Boston College 2015
+#&gt; 30       68            Boston U. 2015
+#&gt; 31       71        Bowling Green 2015
+#&gt; 32       72              Bradley 2015
+#&gt; 33       80                Brown 2015
+#&gt; 34       81               Bryant 2015
+#&gt; 35       83             Bucknell 2015
+#&gt; 36       86              Buffalo 2015
+#&gt; 37       87               Butler 2015
+#&gt; 38       94      CSU Bakersfield 2015
+#&gt; 39      101                 CSUN 2015
+#&gt; 40       90             Cal Poly 2015
+#&gt; 41       97    Cal St. Fullerton 2015
+#&gt; 42      107           California 2015
+#&gt; 43      115             Campbell 2015
+#&gt; 44      116             Canisius 2015
+#&gt; 45     1004         Central Ark. 2015
+#&gt; 46      127    Central Conn. St. 2015
+#&gt; 47      129        Central Mich. 2015
+#&gt; 48       48       Charleston So. 2015
+#&gt; 49      458            Charlotte 2015
+#&gt; 50      693          Chattanooga 2015
+#&gt; 51      136          Chicago St. 2015
+#&gt; 52      140           Cincinnati 2015
+#&gt; 53      147              Clemson 2015
+#&gt; 54      148        Cleveland St. 2015
+#&gt; 55      149        Coastal Caro. 2015
+#&gt; 56     1014   Col. of Charleston 2015
+#&gt; 57      153              Colgate 2015
+#&gt; 58      157             Colorado 2015
+#&gt; 59      156         Colorado St. 2015
+#&gt; 60      158             Columbia 2015
+#&gt; 61      165           Coppin St. 2015
+#&gt; 62      167              Cornell 2015
+#&gt; 63      169            Creighton 2015
+#&gt; 64      172            Dartmouth 2015
+#&gt; 65      173             Davidson 2015
+#&gt; 66      175               Dayton 2015
+#&gt; 67      176               DePaul 2015
+#&gt; 68      180             Delaware 2015
+#&gt; 69      178         Delaware St. 2015
+#&gt; 70      183               Denver 2015
+#&gt; 71      184        Detroit Mercy 2015
+#&gt; 72      189                Drake 2015
+#&gt; 73      191               Drexel 2015
+#&gt; 74      193                 Duke 2015
+#&gt; 75      194             Duquesne 2015
+#&gt; 76      198                 ETSU 2015
+#&gt; 77      196        East Carolina 2015
+#&gt; 78      201         Eastern Ill. 2015
+#&gt; 79      202          Eastern Ky. 2015
+#&gt; 80      204        Eastern Mich. 2015
+#&gt; 81      207        Eastern Wash. 2015
+#&gt; 82     1068                 Elon 2015
+#&gt; 83      219           Evansville 2015
+#&gt; 84    28755                 FGCU 2015
+#&gt; 85      231                  FIU 2015
+#&gt; 86      220            Fairfield 2015
+#&gt; 87      222  Fairleigh Dickinson 2015
+#&gt; 88      229        Fla. Atlantic 2015
+#&gt; 89      235              Florida 2015
+#&gt; 90      228          Florida A&amp;M 2015
+#&gt; 91      234          Florida St. 2015
+#&gt; 92      236              Fordham 2015
+#&gt; 93       96           Fresno St. 2015
+#&gt; 94      244               Furman 2015
+#&gt; 95      253         Ga. Southern 2015
+#&gt; 96     1092         Gardner-Webb 2015
+#&gt; 97      248         George Mason 2015
+#&gt; 98      249    George Washington 2015
+#&gt; 99      251           Georgetown 2015
+#&gt; 100     257              Georgia 2015
+#&gt; 101     254          Georgia St. 2015
+#&gt; 102     255         Georgia Tech 2015
+#&gt; 103     260              Gonzaga 2015
+#&gt; 104     261            Grambling 2015
+#&gt; 105    1104         Grand Canyon 2015
+#&gt; 106     794            Green Bay 2015
+#&gt; 107     270              Hampton 2015
+#&gt; 108     272             Hartford 2015
+#&gt; 109     275              Harvard 2015
+#&gt; 110     277               Hawaii 2015
+#&gt; 111   19651           High Point 2015
+#&gt; 112     283              Hofstra 2015
+#&gt; 113     285           Holy Cross 2015
+#&gt; 114     288              Houston 2015
+#&gt; 115     287      Houston Baptist 2015
+#&gt; 116     290               Howard 2015
+#&gt; 117    2699                IUPUI 2015
+#&gt; 118     295                Idaho 2015
+#&gt; 119     294            Idaho St. 2015
+#&gt; 120     301             Illinois 2015
+#&gt; 121     299         Illinois St. 2015
+#&gt; 122    2743       Incarnate Word 2015
+#&gt; 123     306              Indiana 2015
+#&gt; 124     305          Indiana St. 2015
+#&gt; 125     310                 Iona 2015
+#&gt; 126     312                 Iowa 2015
+#&gt; 127     311             Iowa St. 2015
+#&gt; 128     314          Jackson St. 2015
+#&gt; 129     316         Jacksonville 2015
+#&gt; 130     315     Jacksonville St. 2015
+#&gt; 131     317        James Madison 2015
+#&gt; 132     328               Kansas 2015
+#&gt; 133     327           Kansas St. 2015
+#&gt; 134    1157         Kennesaw St. 2015
+#&gt; 135     331             Kent St. 2015
+#&gt; 136     334             Kentucky 2015
+#&gt; 137     361         LIU Brooklyn 2015
+#&gt; 138     365                  LSU 2015
+#&gt; 139     340             La Salle 2015
+#&gt; 140     498           La.-Monroe 2015
+#&gt; 141     342            Lafayette 2015
+#&gt; 142     346     Lamar University 2015
+#&gt; 143     352               Lehigh 2015
+#&gt; 144     355              Liberty 2015
+#&gt; 145   28600             Lipscomb 2015
+#&gt; 146      32          Little Rock 2015
+#&gt; 147      99       Long Beach St. 2015
+#&gt; 148     363             Longwood 2015
+#&gt; 149     671            Louisiana 2015
+#&gt; 150     366       Louisiana Tech 2015
+#&gt; 151     367           Louisville 2015
+#&gt; 152     371       Loyola Chicago 2015
+#&gt; 153     369      Loyola Maryland 2015
+#&gt; 154     370     Loyola Marymount 2015
+#&gt; 155     380                Maine 2015
+#&gt; 156     381            Manhattan 2015
+#&gt; 157     386               Marist 2015
+#&gt; 158     387            Marquette 2015
+#&gt; 159     388             Marshall 2015
+#&gt; 160     392             Maryland 2015
+#&gt; 161     400        Massachusetts 2015
+#&gt; 162     402              McNeese 2015
+#&gt; 163     404              Memphis 2015
+#&gt; 164     406               Mercer 2015
+#&gt; 165     415           Miami (FL) 2015
+#&gt; 166     414           Miami (OH) 2015
+#&gt; 167     418             Michigan 2015
+#&gt; 168     416         Michigan St. 2015
+#&gt; 169     419         Middle Tenn. 2015
+#&gt; 170     797            Milwaukee 2015
+#&gt; 171     428            Minnesota 2015
+#&gt; 172     430      Mississippi St. 2015
+#&gt; 173     432     Mississippi Val. 2015
+#&gt; 174     434             Missouri 2015
+#&gt; 175     669         Missouri St. 2015
+#&gt; 176     439             Monmouth 2015
+#&gt; 177     441              Montana 2015
+#&gt; 178     440          Montana St. 2015
+#&gt; 179     444         Morehead St. 2015
+#&gt; 180     446           Morgan St. 2015
+#&gt; 181     450       Mt. St. Mary's 2015
+#&gt; 182     454           Murray St. 2015
+#&gt; 183     488             N.C. A&amp;T 2015
+#&gt; 184     489         N.C. Central 2015
+#&gt; 185     490             NC State 2015
+#&gt; 186     471                 NJIT 2015
+#&gt; 187     726                 Navy 2015
+#&gt; 188     463             Nebraska 2015
+#&gt; 189     466               Nevada 2015
+#&gt; 190     469        New Hampshire 2015
+#&gt; 191     473           New Mexico 2015
+#&gt; 192     472       New Mexico St. 2015
+#&gt; 193     474          New Orleans 2015
+#&gt; 194     482              Niagara 2015
+#&gt; 195     483         Nicholls St. 2015
+#&gt; 196     485          Norfolk St. 2015
+#&gt; 197     457       North Carolina 2015
+#&gt; 198     494         North Dakota 2015
+#&gt; 199     493     North Dakota St. 2015
+#&gt; 200    2711        North Florida 2015
+#&gt; 201     497          North Texas 2015
+#&gt; 202     500         Northeastern 2015
+#&gt; 203     501       Northern Ariz. 2015
+#&gt; 204     502       Northern Colo. 2015
+#&gt; 205     503        Northern Ill. 2015
+#&gt; 206     505         Northern Ky. 2015
+#&gt; 207     509         Northwestern 2015
+#&gt; 208     508     Northwestern St. 2015
+#&gt; 209     513           Notre Dame 2015
+#&gt; 210     514              Oakland 2015
+#&gt; 211     519                 Ohio 2015
+#&gt; 212     518             Ohio St. 2015
+#&gt; 213     522             Oklahoma 2015
+#&gt; 214     521         Oklahoma St. 2015
+#&gt; 215     523         Old Dominion 2015
+#&gt; 216     433             Ole Miss 2015
+#&gt; 217     464                Omaha 2015
+#&gt; 218     527         Oral Roberts 2015
+#&gt; 219     529               Oregon 2015
+#&gt; 220     528           Oregon St. 2015
+#&gt; 221     534              Pacific 2015
+#&gt; 222     540                 Penn 2015
+#&gt; 223     539             Penn St. 2015
+#&gt; 224     541           Pepperdine 2015
+#&gt; 225     545           Pittsburgh 2015
+#&gt; 226     551             Portland 2015
+#&gt; 227     550         Portland St. 2015
+#&gt; 228     553         Prairie View 2015
+#&gt; 229    1320         Presbyterian 2015
+#&gt; 230     554            Princeton 2015
+#&gt; 231     556           Providence 2015
+#&gt; 232     559               Purdue 2015
+#&gt; 233     308    Purdue Fort Wayne 2015
+#&gt; 234     562           Quinnipiac 2015
+#&gt; 235     563              Radford 2015
+#&gt; 236     572         Rhode Island 2015
+#&gt; 237     574                 Rice 2015
+#&gt; 238     575             Richmond 2015
+#&gt; 239     576                Rider 2015
+#&gt; 240     579        Robert Morris 2015
+#&gt; 241     587              Rutgers 2015
+#&gt; 242     676                  SFA 2015
+#&gt; 243     660                 SIUE 2015
+#&gt; 244     663                  SMU 2015
+#&gt; 245     102       Sacramento St. 2015
+#&gt; 246     590         Sacred Heart 2015
+#&gt; 247     600   Saint Francis (PA) 2015
+#&gt; 248     606       Saint Joseph's 2015
+#&gt; 249     609          Saint Louis 2015
+#&gt; 250     610    Saint Mary's (CA) 2015
+#&gt; 251     617        Saint Peter's 2015
+#&gt; 252     624      Sam Houston St. 2015
+#&gt; 253     625              Samford 2015
+#&gt; 254     627            San Diego 2015
+#&gt; 255     626        San Diego St. 2015
+#&gt; 256     629        San Francisco 2015
+#&gt; 257     630         San Jose St. 2015
+#&gt; 258     631          Santa Clara 2015
+#&gt; 259     632         Savannah St. 2015
+#&gt; 260    1356            Seattle U 2015
+#&gt; 261     635           Seton Hall 2015
+#&gt; 262     639                Siena 2015
+#&gt; 263     646        South Alabama 2015
+#&gt; 264     648       South Carolina 2015
+#&gt; 265     647   South Carolina St. 2015
+#&gt; 266     650         South Dakota 2015
+#&gt; 267     649     South Dakota St. 2015
+#&gt; 268     651           South Fla. 2015
+#&gt; 269     654    Southeast Mo. St. 2015
+#&gt; 270     655     Southeastern La. 2015
+#&gt; 271     657  Southern California 2015
+#&gt; 272     659        Southern Ill. 2015
+#&gt; 273     664       Southern Miss. 2015
+#&gt; 274     665          Southern U. 2015
+#&gt; 275     667        Southern Utah 2015
+#&gt; 276     596      St. Bonaventure 2015
+#&gt; 277     599 St. Francis Brooklyn 2015
+#&gt; 278     603      St. John's (NY) 2015
+#&gt; 279     674             Stanford 2015
+#&gt; 280     678              Stetson 2015
+#&gt; 281     683          Stony Brook 2015
+#&gt; 282     688             Syracuse 2015
+#&gt; 283     698                  TCU 2015
+#&gt; 284     690               Temple 2015
+#&gt; 285     694            Tennessee 2015
+#&gt; 286     691        Tennessee St. 2015
+#&gt; 287     692       Tennessee Tech 2015
+#&gt; 288     703                Texas 2015
+#&gt; 289     697            Texas A&amp;M 2015
+#&gt; 290     699       Texas Southern 2015
+#&gt; 291     670            Texas St. 2015
+#&gt; 292     700           Texas Tech 2015
+#&gt; 293     141          The Citadel 2015
+#&gt; 294     709               Toledo 2015
+#&gt; 295     711               Towson 2015
+#&gt; 296     716                 Troy 2015
+#&gt; 297     718               Tulane 2015
+#&gt; 298     719                Tulsa 2015
+#&gt; 299       9                  UAB 2015
+#&gt; 300     108             UC Davis 2015
+#&gt; 301     109            UC Irvine 2015
+#&gt; 302     111         UC Riverside 2015
+#&gt; 303     104     UC Santa Barbara 2015
+#&gt; 304     128                  UCF 2015
+#&gt; 305     110                 UCLA 2015
+#&gt; 306     164                UConn 2015
+#&gt; 307     302                  UIC 2015
+#&gt; 308     391                 UMBC 2015
+#&gt; 309     393                 UMES 2015
+#&gt; 310    2707                 UMKC 2015
+#&gt; 311     368         UMass Lowell 2015
+#&gt; 312     456        UNC Asheville 2015
+#&gt; 313     459       UNC Greensboro 2015
+#&gt; 314     460                 UNCW 2015
+#&gt; 315     504                  UNI 2015
+#&gt; 316     465                 UNLV 2015
+#&gt; 317   10411          USC Upstate 2015
+#&gt; 318     702         UT Arlington 2015
+#&gt; 319     695            UT Martin 2015
+#&gt; 320     704                 UTEP 2015
+#&gt; 321     536                UTRGV 2015
+#&gt; 322     706                 UTSA 2015
+#&gt; 323     732                 Utah 2015
+#&gt; 324     731             Utah St. 2015
+#&gt; 325   30024          Utah Valley 2015
+#&gt; 326     740                  VCU 2015
+#&gt; 327     741                  VMI 2015
+#&gt; 328     735           Valparaiso 2015
+#&gt; 329     736           Vanderbilt 2015
+#&gt; 330     738              Vermont 2015
+#&gt; 331     739            Villanova 2015
+#&gt; 332     746             Virginia 2015
+#&gt; 333     742        Virginia Tech 2015
+#&gt; 334     748               Wagner 2015
+#&gt; 335     749          Wake Forest 2015
+#&gt; 336     756           Washington 2015
+#&gt; 337     754       Washington St. 2015
+#&gt; 338     758            Weber St. 2015
+#&gt; 339     768        West Virginia 2015
+#&gt; 340     769        Western Caro. 2015
+#&gt; 341     771         Western Ill. 2015
+#&gt; 342     772          Western Ky. 2015
+#&gt; 343     774        Western Mich. 2015
+#&gt; 344     782          Wichita St. 2015
+#&gt; 345     786       William &amp; Mary 2015
+#&gt; 346     792             Winthrop 2015
+#&gt; 347     796            Wisconsin 2015
+#&gt; 348    2915              Wofford 2015
+#&gt; 349     810           Wright St. 2015
+#&gt; 350     811              Wyoming 2015
+#&gt; 351     812               Xavier 2015
+#&gt; 352     813                 Yale 2015
+#&gt; 353     817       Youngstown St. 2015</div><div class='input'><span class='fu'>team_mapping</span>(<span class='fl'>2015</span>,<span class='st'>"MBB"</span>)</div><div class='output co'>#&gt;     team_id            team_name year
+#&gt; 3     26172   A&amp;M-Corpus Christi 2015
+#&gt; 4         2    Abilene Christian 2015
+#&gt; 5       721            Air Force 2015
+#&gt; 6         5                Akron 2015
+#&gt; 7         8              Alabama 2015
+#&gt; 8         6          Alabama A&amp;M 2015
+#&gt; 9         7          Alabama St. 2015
+#&gt; 10       14          Albany (NY) 2015
+#&gt; 11       17               Alcorn 2015
+#&gt; 12       23             American 2015
+#&gt; 13       27      Appalachian St. 2015
+#&gt; 14       29              Arizona 2015
+#&gt; 15       28          Arizona St. 2015
+#&gt; 16     2678      Ark.-Pine Bluff 2015
+#&gt; 17       31             Arkansas 2015
+#&gt; 18       30         Arkansas St. 2015
+#&gt; 19      725      Army West Point 2015
+#&gt; 20       37               Auburn 2015
+#&gt; 21       43          Austin Peay 2015
+#&gt; 22       77                  BYU 2015
+#&gt; 23       47             Ball St. 2015
+#&gt; 24       51               Baylor 2015
+#&gt; 25    14927              Belmont 2015
+#&gt; 26       61      Bethune-Cookman 2015
+#&gt; 27       62           Binghamton 2015
+#&gt; 28       66            Boise St. 2015
+#&gt; 29       67       Boston College 2015
+#&gt; 30       68            Boston U. 2015
+#&gt; 31       71        Bowling Green 2015
+#&gt; 32       72              Bradley 2015
+#&gt; 33       80                Brown 2015
+#&gt; 34       81               Bryant 2015
+#&gt; 35       83             Bucknell 2015
+#&gt; 36       86              Buffalo 2015
+#&gt; 37       87               Butler 2015
+#&gt; 38       94      CSU Bakersfield 2015
+#&gt; 39      101                 CSUN 2015
+#&gt; 40       90             Cal Poly 2015
+#&gt; 41       97    Cal St. Fullerton 2015
+#&gt; 42      107           California 2015
+#&gt; 43      115             Campbell 2015
+#&gt; 44      116             Canisius 2015
+#&gt; 45     1004         Central Ark. 2015
+#&gt; 46      127    Central Conn. St. 2015
+#&gt; 47      129        Central Mich. 2015
+#&gt; 48       48       Charleston So. 2015
+#&gt; 49      458            Charlotte 2015
+#&gt; 50      693          Chattanooga 2015
+#&gt; 51      136          Chicago St. 2015
+#&gt; 52      140           Cincinnati 2015
+#&gt; 53      147              Clemson 2015
+#&gt; 54      148        Cleveland St. 2015
+#&gt; 55      149        Coastal Caro. 2015
+#&gt; 56     1014   Col. of Charleston 2015
+#&gt; 57      153              Colgate 2015
+#&gt; 58      157             Colorado 2015
+#&gt; 59      156         Colorado St. 2015
+#&gt; 60      158             Columbia 2015
+#&gt; 61      165           Coppin St. 2015
+#&gt; 62      167              Cornell 2015
+#&gt; 63      169            Creighton 2015
+#&gt; 64      172            Dartmouth 2015
+#&gt; 65      173             Davidson 2015
+#&gt; 66      175               Dayton 2015
+#&gt; 67      176               DePaul 2015
+#&gt; 68      180             Delaware 2015
+#&gt; 69      178         Delaware St. 2015
+#&gt; 70      183               Denver 2015
+#&gt; 71      184        Detroit Mercy 2015
+#&gt; 72      189                Drake 2015
+#&gt; 73      191               Drexel 2015
+#&gt; 74      193                 Duke 2015
+#&gt; 75      194             Duquesne 2015
+#&gt; 76      198                 ETSU 2015
+#&gt; 77      196        East Carolina 2015
+#&gt; 78      201         Eastern Ill. 2015
+#&gt; 79      202          Eastern Ky. 2015
+#&gt; 80      204        Eastern Mich. 2015
+#&gt; 81      207        Eastern Wash. 2015
+#&gt; 82     1068                 Elon 2015
+#&gt; 83      219           Evansville 2015
+#&gt; 84    28755                 FGCU 2015
+#&gt; 85      231                  FIU 2015
+#&gt; 86      220            Fairfield 2015
+#&gt; 87      222  Fairleigh Dickinson 2015
+#&gt; 88      229        Fla. Atlantic 2015
+#&gt; 89      235              Florida 2015
+#&gt; 90      228          Florida A&amp;M 2015
+#&gt; 91      234          Florida St. 2015
+#&gt; 92      236              Fordham 2015
+#&gt; 93       96           Fresno St. 2015
+#&gt; 94      244               Furman 2015
+#&gt; 95      253         Ga. Southern 2015
+#&gt; 96     1092         Gardner-Webb 2015
+#&gt; 97      248         George Mason 2015
+#&gt; 98      249    George Washington 2015
+#&gt; 99      251           Georgetown 2015
+#&gt; 100     257              Georgia 2015
+#&gt; 101     254          Georgia St. 2015
+#&gt; 102     255         Georgia Tech 2015
+#&gt; 103     260              Gonzaga 2015
+#&gt; 104     261            Grambling 2015
+#&gt; 105    1104         Grand Canyon 2015
+#&gt; 106     794            Green Bay 2015
+#&gt; 107     270              Hampton 2015
+#&gt; 108     272             Hartford 2015
+#&gt; 109     275              Harvard 2015
+#&gt; 110     277               Hawaii 2015
+#&gt; 111   19651           High Point 2015
+#&gt; 112     283              Hofstra 2015
+#&gt; 113     285           Holy Cross 2015
+#&gt; 114     288              Houston 2015
+#&gt; 115     287      Houston Baptist 2015
+#&gt; 116     290               Howard 2015
+#&gt; 117    2699                IUPUI 2015
+#&gt; 118     295                Idaho 2015
+#&gt; 119     294            Idaho St. 2015
+#&gt; 120     301             Illinois 2015
+#&gt; 121     299         Illinois St. 2015
+#&gt; 122    2743       Incarnate Word 2015
+#&gt; 123     306              Indiana 2015
+#&gt; 124     305          Indiana St. 2015
+#&gt; 125     310                 Iona 2015
+#&gt; 126     312                 Iowa 2015
+#&gt; 127     311             Iowa St. 2015
+#&gt; 128     314          Jackson St. 2015
+#&gt; 129     316         Jacksonville 2015
+#&gt; 130     315     Jacksonville St. 2015
+#&gt; 131     317        James Madison 2015
+#&gt; 132     328               Kansas 2015
+#&gt; 133     327           Kansas St. 2015
+#&gt; 134    1157         Kennesaw St. 2015
+#&gt; 135     331             Kent St. 2015
+#&gt; 136     334             Kentucky 2015
+#&gt; 137     361         LIU Brooklyn 2015
+#&gt; 138     365                  LSU 2015
+#&gt; 139     340             La Salle 2015
+#&gt; 140     498           La.-Monroe 2015
+#&gt; 141     342            Lafayette 2015
+#&gt; 142     346     Lamar University 2015
+#&gt; 143     352               Lehigh 2015
+#&gt; 144     355              Liberty 2015
+#&gt; 145   28600             Lipscomb 2015
+#&gt; 146      32          Little Rock 2015
+#&gt; 147      99       Long Beach St. 2015
+#&gt; 148     363             Longwood 2015
+#&gt; 149     671            Louisiana 2015
+#&gt; 150     366       Louisiana Tech 2015
+#&gt; 151     367           Louisville 2015
+#&gt; 152     371       Loyola Chicago 2015
+#&gt; 153     369      Loyola Maryland 2015
+#&gt; 154     370     Loyola Marymount 2015
+#&gt; 155     380                Maine 2015
+#&gt; 156     381            Manhattan 2015
+#&gt; 157     386               Marist 2015
+#&gt; 158     387            Marquette 2015
+#&gt; 159     388             Marshall 2015
+#&gt; 160     392             Maryland 2015
+#&gt; 161     400        Massachusetts 2015
+#&gt; 162     402              McNeese 2015
+#&gt; 163     404              Memphis 2015
+#&gt; 164     406               Mercer 2015
+#&gt; 165     415           Miami (FL) 2015
+#&gt; 166     414           Miami (OH) 2015
+#&gt; 167     418             Michigan 2015
+#&gt; 168     416         Michigan St. 2015
+#&gt; 169     419         Middle Tenn. 2015
+#&gt; 170     797            Milwaukee 2015
+#&gt; 171     428            Minnesota 2015
+#&gt; 172     430      Mississippi St. 2015
+#&gt; 173     432     Mississippi Val. 2015
+#&gt; 174     434             Missouri 2015
+#&gt; 175     669         Missouri St. 2015
+#&gt; 176     439             Monmouth 2015
+#&gt; 177     441              Montana 2015
+#&gt; 178     440          Montana St. 2015
+#&gt; 179     444         Morehead St. 2015
+#&gt; 180     446           Morgan St. 2015
+#&gt; 181     450       Mt. St. Mary's 2015
+#&gt; 182     454           Murray St. 2015
+#&gt; 183     488             N.C. A&amp;T 2015
+#&gt; 184     489         N.C. Central 2015
+#&gt; 185     490             NC State 2015
+#&gt; 186     471                 NJIT 2015
+#&gt; 187     726                 Navy 2015
+#&gt; 188     463             Nebraska 2015
+#&gt; 189     466               Nevada 2015
+#&gt; 190     469        New Hampshire 2015
+#&gt; 191     473           New Mexico 2015
+#&gt; 192     472       New Mexico St. 2015
+#&gt; 193     474          New Orleans 2015
+#&gt; 194     482              Niagara 2015
+#&gt; 195     483         Nicholls St. 2015
+#&gt; 196     485          Norfolk St. 2015
+#&gt; 197     457       North Carolina 2015
+#&gt; 198     494         North Dakota 2015
+#&gt; 199     493     North Dakota St. 2015
+#&gt; 200    2711        North Florida 2015
+#&gt; 201     497          North Texas 2015
+#&gt; 202     500         Northeastern 2015
+#&gt; 203     501       Northern Ariz. 2015
+#&gt; 204     502       Northern Colo. 2015
+#&gt; 205     503        Northern Ill. 2015
+#&gt; 206     505         Northern Ky. 2015
+#&gt; 207     509         Northwestern 2015
+#&gt; 208     508     Northwestern St. 2015
+#&gt; 209     513           Notre Dame 2015
+#&gt; 210     514              Oakland 2015
+#&gt; 211     519                 Ohio 2015
+#&gt; 212     518             Ohio St. 2015
+#&gt; 213     522             Oklahoma 2015
+#&gt; 214     521         Oklahoma St. 2015
+#&gt; 215     523         Old Dominion 2015
+#&gt; 216     433             Ole Miss 2015
+#&gt; 217     464                Omaha 2015
+#&gt; 218     527         Oral Roberts 2015
+#&gt; 219     529               Oregon 2015
+#&gt; 220     528           Oregon St. 2015
+#&gt; 221     534              Pacific 2015
+#&gt; 222     540                 Penn 2015
+#&gt; 223     539             Penn St. 2015
+#&gt; 224     541           Pepperdine 2015
+#&gt; 225     545           Pittsburgh 2015
+#&gt; 226     551             Portland 2015
+#&gt; 227     550         Portland St. 2015
+#&gt; 228     553         Prairie View 2015
+#&gt; 229    1320         Presbyterian 2015
+#&gt; 230     554            Princeton 2015
+#&gt; 231     556           Providence 2015
+#&gt; 232     559               Purdue 2015
+#&gt; 233     308    Purdue Fort Wayne 2015
+#&gt; 234     562           Quinnipiac 2015
+#&gt; 235     563              Radford 2015
+#&gt; 236     572         Rhode Island 2015
+#&gt; 237     574                 Rice 2015
+#&gt; 238     575             Richmond 2015
+#&gt; 239     576                Rider 2015
+#&gt; 240     579        Robert Morris 2015
+#&gt; 241     587              Rutgers 2015
+#&gt; 242     676                  SFA 2015
+#&gt; 243     660                 SIUE 2015
+#&gt; 244     663                  SMU 2015
+#&gt; 245     102       Sacramento St. 2015
+#&gt; 246     590         Sacred Heart 2015
+#&gt; 247     600   Saint Francis (PA) 2015
+#&gt; 248     606       Saint Joseph's 2015
+#&gt; 249     609          Saint Louis 2015
+#&gt; 250     610    Saint Mary's (CA) 2015
+#&gt; 251     617        Saint Peter's 2015
+#&gt; 252     624      Sam Houston St. 2015
+#&gt; 253     625              Samford 2015
+#&gt; 254     627            San Diego 2015
+#&gt; 255     626        San Diego St. 2015
+#&gt; 256     629        San Francisco 2015
+#&gt; 257     630         San Jose St. 2015
+#&gt; 258     631          Santa Clara 2015
+#&gt; 259     632         Savannah St. 2015
+#&gt; 260    1356            Seattle U 2015
+#&gt; 261     635           Seton Hall 2015
+#&gt; 262     639                Siena 2015
+#&gt; 263     646        South Alabama 2015
+#&gt; 264     648       South Carolina 2015
+#&gt; 265     647   South Carolina St. 2015
+#&gt; 266     650         South Dakota 2015
+#&gt; 267     649     South Dakota St. 2015
+#&gt; 268     651           South Fla. 2015
+#&gt; 269     654    Southeast Mo. St. 2015
+#&gt; 270     655     Southeastern La. 2015
+#&gt; 271     657  Southern California 2015
+#&gt; 272     659        Southern Ill. 2015
+#&gt; 273     664       Southern Miss. 2015
+#&gt; 274     665          Southern U. 2015
+#&gt; 275     667        Southern Utah 2015
+#&gt; 276     596      St. Bonaventure 2015
+#&gt; 277     599 St. Francis Brooklyn 2015
+#&gt; 278     603      St. John's (NY) 2015
+#&gt; 279     674             Stanford 2015
+#&gt; 280     678              Stetson 2015
+#&gt; 281     683          Stony Brook 2015
+#&gt; 282     688             Syracuse 2015
+#&gt; 283     698                  TCU 2015
+#&gt; 284     690               Temple 2015
+#&gt; 285     694            Tennessee 2015
+#&gt; 286     691        Tennessee St. 2015
+#&gt; 287     692       Tennessee Tech 2015
+#&gt; 288     703                Texas 2015
+#&gt; 289     697            Texas A&amp;M 2015
+#&gt; 290     699       Texas Southern 2015
+#&gt; 291     670            Texas St. 2015
+#&gt; 292     700           Texas Tech 2015
+#&gt; 293     141          The Citadel 2015
+#&gt; 294     709               Toledo 2015
+#&gt; 295     711               Towson 2015
+#&gt; 296     716                 Troy 2015
+#&gt; 297     718               Tulane 2015
+#&gt; 298     719                Tulsa 2015
+#&gt; 299       9                  UAB 2015
+#&gt; 300     108             UC Davis 2015
+#&gt; 301     109            UC Irvine 2015
+#&gt; 302     111         UC Riverside 2015
+#&gt; 303     104     UC Santa Barbara 2015
+#&gt; 304     128                  UCF 2015
+#&gt; 305     110                 UCLA 2015
+#&gt; 306     164                UConn 2015
+#&gt; 307     302                  UIC 2015
+#&gt; 308     391                 UMBC 2015
+#&gt; 309     393                 UMES 2015
+#&gt; 310    2707                 UMKC 2015
+#&gt; 311     368         UMass Lowell 2015
+#&gt; 312     456        UNC Asheville 2015
+#&gt; 313     459       UNC Greensboro 2015
+#&gt; 314     460                 UNCW 2015
+#&gt; 315     504                  UNI 2015
+#&gt; 316     465                 UNLV 2015
+#&gt; 317   10411          USC Upstate 2015
+#&gt; 318     702         UT Arlington 2015
+#&gt; 319     695            UT Martin 2015
+#&gt; 320     704                 UTEP 2015
+#&gt; 321     536                UTRGV 2015
+#&gt; 322     706                 UTSA 2015
+#&gt; 323     732                 Utah 2015
+#&gt; 324     731             Utah St. 2015
+#&gt; 325   30024          Utah Valley 2015
+#&gt; 326     740                  VCU 2015
+#&gt; 327     741                  VMI 2015
+#&gt; 328     735           Valparaiso 2015
+#&gt; 329     736           Vanderbilt 2015
+#&gt; 330     738              Vermont 2015
+#&gt; 331     739            Villanova 2015
+#&gt; 332     746             Virginia 2015
+#&gt; 333     742        Virginia Tech 2015
+#&gt; 334     748               Wagner 2015
+#&gt; 335     749          Wake Forest 2015
+#&gt; 336     756           Washington 2015
+#&gt; 337     754       Washington St. 2015
+#&gt; 338     758            Weber St. 2015
+#&gt; 339     768        West Virginia 2015
+#&gt; 340     769        Western Caro. 2015
+#&gt; 341     771         Western Ill. 2015
+#&gt; 342     772          Western Ky. 2015
+#&gt; 343     774        Western Mich. 2015
+#&gt; 344     782          Wichita St. 2015
+#&gt; 345     786       William &amp; Mary 2015
+#&gt; 346     792             Winthrop 2015
+#&gt; 347     796            Wisconsin 2015
+#&gt; 348    2915              Wofford 2015
+#&gt; 349     810           Wright St. 2015
+#&gt; 350     811              Wyoming 2015
+#&gt; 351     812               Xavier 2015
+#&gt; 352     813                 Yale 2015
+#&gt; 353     817       Youngstown St. 2015</div><div class='input'>
 <span class='fu'>team_mapping</span>(<span class='fl'>2016</span>,<span class='st'>"Womens Soccer"</span>)</div><div class='output co'>#&gt;     team_id           team_name year
-#&gt; 4     26172  A&amp;M-Corpus Christi 2016
-#&gt; 5         2   Abilene Christian 2016
-#&gt; 6       721           Air Force 2016
-#&gt; 7         5               Akron 2016
-#&gt; 8         8             Alabama 2016
-#&gt; 9         6         Alabama A&amp;M 2016
-#&gt; 10        7         Alabama St. 2016
-#&gt; 11       14         Albany (NY) 2016
-#&gt; 12       17              Alcorn 2016
-#&gt; 13       23            American 2016
-#&gt; 14       27     Appalachian St. 2016
-#&gt; 15       29             Arizona 2016
-#&gt; 16       28         Arizona St. 2016
-#&gt; 17     2678     Ark.-Pine Bluff 2016
-#&gt; 18       31            Arkansas 2016
-#&gt; 19       30        Arkansas St. 2016
-#&gt; 20      725     Army West Point 2016
-#&gt; 21       37              Auburn 2016
-#&gt; 22       43         Austin Peay 2016
-#&gt; 23       77                 BYU 2016
-#&gt; 24       47            Ball St. 2016
-#&gt; 25       51              Baylor 2016
-#&gt; 26    14927             Belmont 2016
-#&gt; 27       62          Binghamton 2016
-#&gt; 28       66           Boise St. 2016
-#&gt; 29       67      Boston College 2016
-#&gt; 30       68           Boston U. 2016
-#&gt; 31       71       Bowling Green 2016
-#&gt; 32       80               Brown 2016
-#&gt; 33       81              Bryant 2016
-#&gt; 34       83            Bucknell 2016
-#&gt; 35       86             Buffalo 2016
-#&gt; 36       87              Butler 2016
-#&gt; 37       94     CSU Bakersfield 2016
-#&gt; 38      101                CSUN 2016
-#&gt; 39       90            Cal Poly 2016
-#&gt; 40       97   Cal St. Fullerton 2016
-#&gt; 41      107          California 2016
-#&gt; 42      115            Campbell 2016
-#&gt; 43      116            Canisius 2016
-#&gt; 44     1004        Central Ark. 2016
-#&gt; 45      127   Central Conn. St. 2016
-#&gt; 46      129       Central Mich. 2016
-#&gt; 47       48      Charleston So. 2016
-#&gt; 48      458           Charlotte 2016
-#&gt; 49      693         Chattanooga 2016
-#&gt; 50      136         Chicago St. 2016
-#&gt; 51      140          Cincinnati 2016
-#&gt; 52      147             Clemson 2016
-#&gt; 53      148       Cleveland St. 2016
-#&gt; 54      149       Coastal Caro. 2016
-#&gt; 55     1014  Col. of Charleston 2016
-#&gt; 56      153             Colgate 2016
-#&gt; 57      157            Colorado 2016
-#&gt; 58      154       Colorado Col. 2016
-#&gt; 59      156        Colorado St. 2016
-#&gt; 60      158            Columbia 2016
-#&gt; 61      167             Cornell 2016
-#&gt; 62      169           Creighton 2016
-#&gt; 63      172           Dartmouth 2016
-#&gt; 64      173            Davidson 2016
-#&gt; 65      175              Dayton 2016
-#&gt; 66      176              DePaul 2016
-#&gt; 67      180            Delaware 2016
-#&gt; 68      178        Delaware St. 2016
-#&gt; 69      183              Denver 2016
-#&gt; 70      184       Detroit Mercy 2016
-#&gt; 71      189               Drake 2016
-#&gt; 72      191              Drexel 2016
-#&gt; 73      193                Duke 2016
-#&gt; 74      194            Duquesne 2016
-#&gt; 75      198                ETSU 2016
-#&gt; 76      196       East Carolina 2016
-#&gt; 77      201        Eastern Ill. 2016
-#&gt; 78      202         Eastern Ky. 2016
-#&gt; 79      204       Eastern Mich. 2016
-#&gt; 80      207       Eastern Wash. 2016
-#&gt; 81     1068                Elon 2016
-#&gt; 82      219          Evansville 2016
-#&gt; 83    28755                FGCU 2016
-#&gt; 84      231                 FIU 2016
-#&gt; 85      220           Fairfield 2016
-#&gt; 86      222 Fairleigh Dickinson 2016
-#&gt; 87      229       Fla. Atlantic 2016
-#&gt; 88      235             Florida 2016
-#&gt; 89      234         Florida St. 2016
-#&gt; 90      236             Fordham 2016
-#&gt; 91      308          Fort Wayne 2016
-#&gt; 92     1085      Francis Marion 2016
-#&gt; 93       96          Fresno St. 2016
-#&gt; 94      244              Furman 2016
-#&gt; 95      253        Ga. Southern 2016
-#&gt; 96     1092        Gardner-Webb 2016
-#&gt; 97      248        George Mason 2016
-#&gt; 98      249   George Washington 2016
-#&gt; 99      251          Georgetown 2016
-#&gt; 100     257             Georgia 2016
-#&gt; 101     254         Georgia St. 2016
-#&gt; 102     260             Gonzaga 2016
-#&gt; 103     261           Grambling 2016
-#&gt; 104    1104        Grand Canyon 2016
-#&gt; 105     794           Green Bay 2016
-#&gt; 106     270             Hampton 2016
-#&gt; 107     272            Hartford 2016
-#&gt; 108     275             Harvard 2016
-#&gt; 109     277              Hawaii 2016
-#&gt; 110   19651          High Point 2016
-#&gt; 111     283             Hofstra 2016
-#&gt; 112     285          Holy Cross 2016
-#&gt; 113     288             Houston 2016
-#&gt; 114     287     Houston Baptist 2016
-#&gt; 115     290              Howard 2016
-#&gt; 116    2699               IUPUI 2016
-#&gt; 117     295               Idaho 2016
-#&gt; 118     294           Idaho St. 2016
-#&gt; 119     302        Ill.-Chicago 2016
-#&gt; 120     301            Illinois 2016
-#&gt; 121     299        Illinois St. 2016
-#&gt; 122    2743      Incarnate Word 2016
-#&gt; 123     306             Indiana 2016
-#&gt; 124     305         Indiana St. 2016
-#&gt; 125     310                Iona 2016
-#&gt; 126     312                Iowa 2016
-#&gt; 127     311            Iowa St. 2016
-#&gt; 128     314         Jackson St. 2016
-#&gt; 129     316        Jacksonville 2016
-#&gt; 130     315    Jacksonville St. 2016
-#&gt; 131     317       James Madison 2016
-#&gt; 132     328              Kansas 2016
-#&gt; 133    1157        Kennesaw St. 2016
-#&gt; 134     331            Kent St. 2016
-#&gt; 135     334            Kentucky 2016
-#&gt; 136     361        LIU Brooklyn 2016
-#&gt; 137     365                 LSU 2016
-#&gt; 138     340            La Salle 2016
-#&gt; 139     498          La.-Monroe 2016
-#&gt; 140     342           Lafayette 2016
-#&gt; 141     346    Lamar University 2016
-#&gt; 142     352              Lehigh 2016
-#&gt; 143     355             Liberty 2016
-#&gt; 144   28600            Lipscomb 2016
-#&gt; 145      32         Little Rock 2016
-#&gt; 146      99      Long Beach St. 2016
-#&gt; 147     363            Longwood 2016
-#&gt; 148     671           Louisiana 2016
-#&gt; 149     366      Louisiana Tech 2016
-#&gt; 150     367          Louisville 2016
-#&gt; 151     371      Loyola Chicago 2016
-#&gt; 152     369     Loyola Maryland 2016
-#&gt; 153     370    Loyola Marymount 2016
-#&gt; 154     380               Maine 2016
-#&gt; 155     381           Manhattan 2016
-#&gt; 156     386              Marist 2016
-#&gt; 157     387           Marquette 2016
-#&gt; 158     388            Marshall 2016
-#&gt; 159     392            Maryland 2016
-#&gt; 160     400       Massachusetts 2016
-#&gt; 161     402             McNeese 2016
-#&gt; 162     404             Memphis 2016
-#&gt; 163     406              Mercer 2016
-#&gt; 164     415          Miami (FL) 2016
-#&gt; 165     414          Miami (OH) 2016
-#&gt; 166     418            Michigan 2016
-#&gt; 167     416        Michigan St. 2016
-#&gt; 168     419        Middle Tenn. 2016
-#&gt; 169     797           Milwaukee 2016
-#&gt; 170     428           Minnesota 2016
-#&gt; 171     430     Mississippi St. 2016
-#&gt; 172     432    Mississippi Val. 2016
-#&gt; 173     434            Missouri 2016
-#&gt; 174     669        Missouri St. 2016
-#&gt; 175     439            Monmouth 2016
-#&gt; 176     441             Montana 2016
-#&gt; 177     444        Morehead St. 2016
-#&gt; 178     450      Mt. St. Mary's 2016
-#&gt; 179     454          Murray St. 2016
-#&gt; 180     490            NC State 2016
-#&gt; 181     471                NJIT 2016
-#&gt; 182     726                Navy 2016
-#&gt; 183     463            Nebraska 2016
-#&gt; 184     466              Nevada 2016
-#&gt; 185     469       New Hampshire 2016
-#&gt; 186     473          New Mexico 2016
-#&gt; 187     472      New Mexico St. 2016
-#&gt; 188     482             Niagara 2016
-#&gt; 189     483        Nicholls St. 2016
-#&gt; 190     457      North Carolina 2016
-#&gt; 191     494        North Dakota 2016
-#&gt; 192     493    North Dakota St. 2016
-#&gt; 193    2711       North Florida 2016
-#&gt; 194     497         North Texas 2016
-#&gt; 195     500        Northeastern 2016
-#&gt; 196     501      Northern Ariz. 2016
-#&gt; 197     502      Northern Colo. 2016
-#&gt; 198     503       Northern Ill. 2016
-#&gt; 199     505        Northern Ky. 2016
-#&gt; 200     509        Northwestern 2016
-#&gt; 201     508    Northwestern St. 2016
-#&gt; 202     513          Notre Dame 2016
-#&gt; 203     514             Oakland 2016
-#&gt; 204     519                Ohio 2016
-#&gt; 205     518            Ohio St. 2016
-#&gt; 206     522            Oklahoma 2016
-#&gt; 207     521        Oklahoma St. 2016
-#&gt; 208     523        Old Dominion 2016
-#&gt; 209     433            Ole Miss 2016
-#&gt; 210     464               Omaha 2016
-#&gt; 211     527        Oral Roberts 2016
-#&gt; 212     529              Oregon 2016
-#&gt; 213     528          Oregon St. 2016
-#&gt; 214     534             Pacific 2016
-#&gt; 215     540                Penn 2016
-#&gt; 216     539            Penn St. 2016
-#&gt; 217     541          Pepperdine 2016
-#&gt; 218     545          Pittsburgh 2016
-#&gt; 219     551            Portland 2016
-#&gt; 220     550        Portland St. 2016
-#&gt; 221     553        Prairie View 2016
-#&gt; 222    1320        Presbyterian 2016
-#&gt; 223     554           Princeton 2016
-#&gt; 224     556          Providence 2016
-#&gt; 225     559              Purdue 2016
-#&gt; 226     562          Quinnipiac 2016
-#&gt; 227     563             Radford 2016
-#&gt; 228     572        Rhode Island 2016
-#&gt; 229     574                Rice 2016
-#&gt; 230     575            Richmond 2016
-#&gt; 231     576               Rider 2016
-#&gt; 232     579       Robert Morris 2016
-#&gt; 233     587             Rutgers 2016
-#&gt; 234     676                 SFA 2016
-#&gt; 235     660                SIUE 2016
-#&gt; 236     663                 SMU 2016
-#&gt; 237     102      Sacramento St. 2016
-#&gt; 238     590        Sacred Heart 2016
-#&gt; 239     600  Saint Francis (PA) 2016
-#&gt; 240     606      Saint Joseph's 2016
-#&gt; 241     609         Saint Louis 2016
-#&gt; 242     610   Saint Mary's (CA) 2016
-#&gt; 243     617       Saint Peter's 2016
-#&gt; 244     624     Sam Houston St. 2016
-#&gt; 245     625             Samford 2016
-#&gt; 246     627           San Diego 2016
-#&gt; 247     626       San Diego St. 2016
-#&gt; 248     629       San Francisco 2016
-#&gt; 249     630        San Jose St. 2016
-#&gt; 250     631         Santa Clara 2016
-#&gt; 251    1356           Seattle U 2016
-#&gt; 252     635          Seton Hall 2016
-#&gt; 253     639               Siena 2016
-#&gt; 254     646          South Ala. 2016
-#&gt; 255     648      South Carolina 2016
-#&gt; 256     647  South Carolina St. 2016
-#&gt; 257     650        South Dakota 2016
-#&gt; 258     649    South Dakota St. 2016
-#&gt; 259     651          South Fla. 2016
-#&gt; 260     654   Southeast Mo. St. 2016
-#&gt; 261     655    Southeastern La. 2016
-#&gt; 262     657 Southern California 2016
-#&gt; 263     664      Southern Miss. 2016
-#&gt; 264     665         Southern U. 2016
-#&gt; 265     667       Southern Utah 2016
-#&gt; 266     596     St. Bonaventure 2016
-#&gt; 267     603     St. John's (NY) 2016
-#&gt; 268     674            Stanford 2016
-#&gt; 269     678             Stetson 2016
-#&gt; 270     683         Stony Brook 2016
-#&gt; 271     688            Syracuse 2016
-#&gt; 272     698                 TCU 2016
-#&gt; 273     690              Temple 2016
-#&gt; 274     694           Tennessee 2016
-#&gt; 275     692      Tennessee Tech 2016
-#&gt; 276     703               Texas 2016
-#&gt; 277     697           Texas A&amp;M 2016
-#&gt; 278     699      Texas Southern 2016
-#&gt; 279     670           Texas St. 2016
-#&gt; 280     700          Texas Tech 2016
-#&gt; 281     141         The Citadel 2016
-#&gt; 282     709              Toledo 2016
-#&gt; 283     711              Towson 2016
-#&gt; 284     716                Troy 2016
-#&gt; 285     719               Tulsa 2016
-#&gt; 286       9                 UAB 2016
-#&gt; 287     108            UC Davis 2016
-#&gt; 288     109           UC Irvine 2016
-#&gt; 289     111        UC Riverside 2016
-#&gt; 290     104    UC Santa Barbara 2016
-#&gt; 291     128                 UCF 2016
-#&gt; 292     110                UCLA 2016
-#&gt; 293     164               UConn 2016
-#&gt; 294     391                UMBC 2016
-#&gt; 295    2707                UMKC 2016
-#&gt; 296     368        UMass Lowell 2016
-#&gt; 297     456       UNC Asheville 2016
-#&gt; 298     459                UNCG 2016
-#&gt; 299     460                UNCW 2016
-#&gt; 300     504                 UNI 2016
-#&gt; 301     465                UNLV 2016
-#&gt; 302   10411         USC Upstate 2016
-#&gt; 303     695           UT Martin 2016
-#&gt; 304     704                UTEP 2016
-#&gt; 305     536               UTRGV 2016
-#&gt; 306     706                UTSA 2016
-#&gt; 307     732                Utah 2016
-#&gt; 308     731            Utah St. 2016
-#&gt; 309   30024         Utah Valley 2016
-#&gt; 310     740                 VCU 2016
-#&gt; 311     741                 VMI 2016
-#&gt; 312     735          Valparaiso 2016
-#&gt; 313     736          Vanderbilt 2016
-#&gt; 314     738             Vermont 2016
-#&gt; 315     739           Villanova 2016
-#&gt; 316     746            Virginia 2016
-#&gt; 317     742       Virginia Tech 2016
-#&gt; 318     748              Wagner 2016
-#&gt; 319     749         Wake Forest 2016
-#&gt; 320     756          Washington 2016
-#&gt; 321     754      Washington St. 2016
-#&gt; 322     758           Weber St. 2016
-#&gt; 323     768       West Virginia 2016
-#&gt; 324     769       Western Caro. 2016
-#&gt; 325     771        Western Ill. 2016
-#&gt; 326     772         Western Ky. 2016
-#&gt; 327     774       Western Mich. 2016
-#&gt; 328     786      William &amp; Mary 2016
-#&gt; 329     792            Winthrop 2016
-#&gt; 330     796           Wisconsin 2016
-#&gt; 331    2915             Wofford 2016
-#&gt; 332     810          Wright St. 2016
-#&gt; 333     811             Wyoming 2016
-#&gt; 334     812              Xavier 2016
-#&gt; 335     813                Yale 2016
-#&gt; 336     817      Youngstown St. 2016</div></pre>
+#&gt; 3     26172  A&amp;M-Corpus Christi 2016
+#&gt; 4         2   Abilene Christian 2016
+#&gt; 5       721           Air Force 2016
+#&gt; 6         5               Akron 2016
+#&gt; 7         8             Alabama 2016
+#&gt; 8         6         Alabama A&amp;M 2016
+#&gt; 9         7         Alabama St. 2016
+#&gt; 10       14         Albany (NY) 2016
+#&gt; 11       17              Alcorn 2016
+#&gt; 12       23            American 2016
+#&gt; 13       27     Appalachian St. 2016
+#&gt; 14       29             Arizona 2016
+#&gt; 15       28         Arizona St. 2016
+#&gt; 16     2678     Ark.-Pine Bluff 2016
+#&gt; 17       31            Arkansas 2016
+#&gt; 18       30        Arkansas St. 2016
+#&gt; 19      725     Army West Point 2016
+#&gt; 20       37              Auburn 2016
+#&gt; 21       43         Austin Peay 2016
+#&gt; 22       77                 BYU 2016
+#&gt; 23       47            Ball St. 2016
+#&gt; 24       51              Baylor 2016
+#&gt; 25    14927             Belmont 2016
+#&gt; 26       62          Binghamton 2016
+#&gt; 27       66           Boise St. 2016
+#&gt; 28       67      Boston College 2016
+#&gt; 29       68           Boston U. 2016
+#&gt; 30       71       Bowling Green 2016
+#&gt; 31       80               Brown 2016
+#&gt; 32       81              Bryant 2016
+#&gt; 33       83            Bucknell 2016
+#&gt; 34       86             Buffalo 2016
+#&gt; 35       87              Butler 2016
+#&gt; 36       94     CSU Bakersfield 2016
+#&gt; 37      101                CSUN 2016
+#&gt; 38       90            Cal Poly 2016
+#&gt; 39       97   Cal St. Fullerton 2016
+#&gt; 40      107          California 2016
+#&gt; 41      115            Campbell 2016
+#&gt; 42      116            Canisius 2016
+#&gt; 43     1004        Central Ark. 2016
+#&gt; 44      127   Central Conn. St. 2016
+#&gt; 45      129       Central Mich. 2016
+#&gt; 46       48      Charleston So. 2016
+#&gt; 47      458           Charlotte 2016
+#&gt; 48      693         Chattanooga 2016
+#&gt; 49      136         Chicago St. 2016
+#&gt; 50      140          Cincinnati 2016
+#&gt; 51      147             Clemson 2016
+#&gt; 52      148       Cleveland St. 2016
+#&gt; 53      149       Coastal Caro. 2016
+#&gt; 54     1014  Col. of Charleston 2016
+#&gt; 55      153             Colgate 2016
+#&gt; 56      157            Colorado 2016
+#&gt; 57      154       Colorado Col. 2016
+#&gt; 58      156        Colorado St. 2016
+#&gt; 59      158            Columbia 2016
+#&gt; 60      167             Cornell 2016
+#&gt; 61      169           Creighton 2016
+#&gt; 62      172           Dartmouth 2016
+#&gt; 63      173            Davidson 2016
+#&gt; 64      175              Dayton 2016
+#&gt; 65      176              DePaul 2016
+#&gt; 66      180            Delaware 2016
+#&gt; 67      178        Delaware St. 2016
+#&gt; 68      183              Denver 2016
+#&gt; 69      184       Detroit Mercy 2016
+#&gt; 70      189               Drake 2016
+#&gt; 71      191              Drexel 2016
+#&gt; 72      193                Duke 2016
+#&gt; 73      194            Duquesne 2016
+#&gt; 74      198                ETSU 2016
+#&gt; 75      196       East Carolina 2016
+#&gt; 76      201        Eastern Ill. 2016
+#&gt; 77      202         Eastern Ky. 2016
+#&gt; 78      204       Eastern Mich. 2016
+#&gt; 79      207       Eastern Wash. 2016
+#&gt; 80     1068                Elon 2016
+#&gt; 81      219          Evansville 2016
+#&gt; 82    28755                FGCU 2016
+#&gt; 83      231                 FIU 2016
+#&gt; 84      220           Fairfield 2016
+#&gt; 85      222 Fairleigh Dickinson 2016
+#&gt; 86      229       Fla. Atlantic 2016
+#&gt; 87      235             Florida 2016
+#&gt; 88      234         Florida St. 2016
+#&gt; 89      236             Fordham 2016
+#&gt; 90     1085      Francis Marion 2016
+#&gt; 91       96          Fresno St. 2016
+#&gt; 92      244              Furman 2016
+#&gt; 93      253        Ga. Southern 2016
+#&gt; 94     1092        Gardner-Webb 2016
+#&gt; 95      248        George Mason 2016
+#&gt; 96      249   George Washington 2016
+#&gt; 97      251          Georgetown 2016
+#&gt; 98      257             Georgia 2016
+#&gt; 99      254         Georgia St. 2016
+#&gt; 100     260             Gonzaga 2016
+#&gt; 101     261           Grambling 2016
+#&gt; 102    1104        Grand Canyon 2016
+#&gt; 103     794           Green Bay 2016
+#&gt; 104     270             Hampton 2016
+#&gt; 105     272            Hartford 2016
+#&gt; 106     275             Harvard 2016
+#&gt; 107     277              Hawaii 2016
+#&gt; 108   19651          High Point 2016
+#&gt; 109     283             Hofstra 2016
+#&gt; 110     285          Holy Cross 2016
+#&gt; 111     288             Houston 2016
+#&gt; 112     287     Houston Baptist 2016
+#&gt; 113     290              Howard 2016
+#&gt; 114    2699               IUPUI 2016
+#&gt; 115     295               Idaho 2016
+#&gt; 116     294           Idaho St. 2016
+#&gt; 117     301            Illinois 2016
+#&gt; 118     299        Illinois St. 2016
+#&gt; 119    2743      Incarnate Word 2016
+#&gt; 120     306             Indiana 2016
+#&gt; 121     305         Indiana St. 2016
+#&gt; 122     310                Iona 2016
+#&gt; 123     312                Iowa 2016
+#&gt; 124     311            Iowa St. 2016
+#&gt; 125     314         Jackson St. 2016
+#&gt; 126     316        Jacksonville 2016
+#&gt; 127     315    Jacksonville St. 2016
+#&gt; 128     317       James Madison 2016
+#&gt; 129     328              Kansas 2016
+#&gt; 130    1157        Kennesaw St. 2016
+#&gt; 131     331            Kent St. 2016
+#&gt; 132     334            Kentucky 2016
+#&gt; 133     361        LIU Brooklyn 2016
+#&gt; 134     365                 LSU 2016
+#&gt; 135     340            La Salle 2016
+#&gt; 136     498          La.-Monroe 2016
+#&gt; 137     342           Lafayette 2016
+#&gt; 138     346    Lamar University 2016
+#&gt; 139     352              Lehigh 2016
+#&gt; 140     355             Liberty 2016
+#&gt; 141   28600            Lipscomb 2016
+#&gt; 142      32         Little Rock 2016
+#&gt; 143      99      Long Beach St. 2016
+#&gt; 144     363            Longwood 2016
+#&gt; 145     671           Louisiana 2016
+#&gt; 146     366      Louisiana Tech 2016
+#&gt; 147     367          Louisville 2016
+#&gt; 148     371      Loyola Chicago 2016
+#&gt; 149     369     Loyola Maryland 2016
+#&gt; 150     370    Loyola Marymount 2016
+#&gt; 151     380               Maine 2016
+#&gt; 152     381           Manhattan 2016
+#&gt; 153     386              Marist 2016
+#&gt; 154     387           Marquette 2016
+#&gt; 155     388            Marshall 2016
+#&gt; 156     392            Maryland 2016
+#&gt; 157     400       Massachusetts 2016
+#&gt; 158     402             McNeese 2016
+#&gt; 159     404             Memphis 2016
+#&gt; 160     406              Mercer 2016
+#&gt; 161     415          Miami (FL) 2016
+#&gt; 162     414          Miami (OH) 2016
+#&gt; 163     418            Michigan 2016
+#&gt; 164     416        Michigan St. 2016
+#&gt; 165     419        Middle Tenn. 2016
+#&gt; 166     797           Milwaukee 2016
+#&gt; 167     428           Minnesota 2016
+#&gt; 168     430     Mississippi St. 2016
+#&gt; 169     432    Mississippi Val. 2016
+#&gt; 170     434            Missouri 2016
+#&gt; 171     669        Missouri St. 2016
+#&gt; 172     439            Monmouth 2016
+#&gt; 173     441             Montana 2016
+#&gt; 174     444        Morehead St. 2016
+#&gt; 175     450      Mt. St. Mary's 2016
+#&gt; 176     454          Murray St. 2016
+#&gt; 177     490            NC State 2016
+#&gt; 178     471                NJIT 2016
+#&gt; 179     726                Navy 2016
+#&gt; 180     463            Nebraska 2016
+#&gt; 181     466              Nevada 2016
+#&gt; 182     469       New Hampshire 2016
+#&gt; 183     473          New Mexico 2016
+#&gt; 184     472      New Mexico St. 2016
+#&gt; 185     482             Niagara 2016
+#&gt; 186     483        Nicholls St. 2016
+#&gt; 187     457      North Carolina 2016
+#&gt; 188     494        North Dakota 2016
+#&gt; 189     493    North Dakota St. 2016
+#&gt; 190    2711       North Florida 2016
+#&gt; 191     497         North Texas 2016
+#&gt; 192     500        Northeastern 2016
+#&gt; 193     501      Northern Ariz. 2016
+#&gt; 194     502      Northern Colo. 2016
+#&gt; 195     503       Northern Ill. 2016
+#&gt; 196     505        Northern Ky. 2016
+#&gt; 197     509        Northwestern 2016
+#&gt; 198     508    Northwestern St. 2016
+#&gt; 199     513          Notre Dame 2016
+#&gt; 200     514             Oakland 2016
+#&gt; 201     519                Ohio 2016
+#&gt; 202     518            Ohio St. 2016
+#&gt; 203     522            Oklahoma 2016
+#&gt; 204     521        Oklahoma St. 2016
+#&gt; 205     523        Old Dominion 2016
+#&gt; 206     433            Ole Miss 2016
+#&gt; 207     464               Omaha 2016
+#&gt; 208     527        Oral Roberts 2016
+#&gt; 209     529              Oregon 2016
+#&gt; 210     528          Oregon St. 2016
+#&gt; 211     534             Pacific 2016
+#&gt; 212     540                Penn 2016
+#&gt; 213     539            Penn St. 2016
+#&gt; 214     541          Pepperdine 2016
+#&gt; 215     545          Pittsburgh 2016
+#&gt; 216     551            Portland 2016
+#&gt; 217     550        Portland St. 2016
+#&gt; 218     553        Prairie View 2016
+#&gt; 219    1320        Presbyterian 2016
+#&gt; 220     554           Princeton 2016
+#&gt; 221     556          Providence 2016
+#&gt; 222     559              Purdue 2016
+#&gt; 223     308   Purdue Fort Wayne 2016
+#&gt; 224     562          Quinnipiac 2016
+#&gt; 225     563             Radford 2016
+#&gt; 226     572        Rhode Island 2016
+#&gt; 227     574                Rice 2016
+#&gt; 228     575            Richmond 2016
+#&gt; 229     576               Rider 2016
+#&gt; 230     579       Robert Morris 2016
+#&gt; 231     587             Rutgers 2016
+#&gt; 232     676                 SFA 2016
+#&gt; 233     660                SIUE 2016
+#&gt; 234     663                 SMU 2016
+#&gt; 235     102      Sacramento St. 2016
+#&gt; 236     590        Sacred Heart 2016
+#&gt; 237     600  Saint Francis (PA) 2016
+#&gt; 238     606      Saint Joseph's 2016
+#&gt; 239     609         Saint Louis 2016
+#&gt; 240     610   Saint Mary's (CA) 2016
+#&gt; 241     617       Saint Peter's 2016
+#&gt; 242     624     Sam Houston St. 2016
+#&gt; 243     625             Samford 2016
+#&gt; 244     627           San Diego 2016
+#&gt; 245     626       San Diego St. 2016
+#&gt; 246     629       San Francisco 2016
+#&gt; 247     630        San Jose St. 2016
+#&gt; 248     631         Santa Clara 2016
+#&gt; 249    1356           Seattle U 2016
+#&gt; 250     635          Seton Hall 2016
+#&gt; 251     639               Siena 2016
+#&gt; 252     646       South Alabama 2016
+#&gt; 253     648      South Carolina 2016
+#&gt; 254     647  South Carolina St. 2016
+#&gt; 255     650        South Dakota 2016
+#&gt; 256     649    South Dakota St. 2016
+#&gt; 257     651          South Fla. 2016
+#&gt; 258     654   Southeast Mo. St. 2016
+#&gt; 259     655    Southeastern La. 2016
+#&gt; 260     657 Southern California 2016
+#&gt; 261     664      Southern Miss. 2016
+#&gt; 262     665         Southern U. 2016
+#&gt; 263     667       Southern Utah 2016
+#&gt; 264     596     St. Bonaventure 2016
+#&gt; 265     603     St. John's (NY) 2016
+#&gt; 266     674            Stanford 2016
+#&gt; 267     678             Stetson 2016
+#&gt; 268     683         Stony Brook 2016
+#&gt; 269     688            Syracuse 2016
+#&gt; 270     698                 TCU 2016
+#&gt; 271     690              Temple 2016
+#&gt; 272     694           Tennessee 2016
+#&gt; 273     692      Tennessee Tech 2016
+#&gt; 274     703               Texas 2016
+#&gt; 275     697           Texas A&amp;M 2016
+#&gt; 276     699      Texas Southern 2016
+#&gt; 277     670           Texas St. 2016
+#&gt; 278     700          Texas Tech 2016
+#&gt; 279     141         The Citadel 2016
+#&gt; 280     709              Toledo 2016
+#&gt; 281     711              Towson 2016
+#&gt; 282     716                Troy 2016
+#&gt; 283     719               Tulsa 2016
+#&gt; 284       9                 UAB 2016
+#&gt; 285     108            UC Davis 2016
+#&gt; 286     109           UC Irvine 2016
+#&gt; 287     111        UC Riverside 2016
+#&gt; 288     104    UC Santa Barbara 2016
+#&gt; 289     128                 UCF 2016
+#&gt; 290     110                UCLA 2016
+#&gt; 291     164               UConn 2016
+#&gt; 292     302                 UIC 2016
+#&gt; 293     391                UMBC 2016
+#&gt; 294    2707                UMKC 2016
+#&gt; 295     368        UMass Lowell 2016
+#&gt; 296     456       UNC Asheville 2016
+#&gt; 297     459      UNC Greensboro 2016
+#&gt; 298     460                UNCW 2016
+#&gt; 299     504                 UNI 2016
+#&gt; 300     465                UNLV 2016
+#&gt; 301   10411         USC Upstate 2016
+#&gt; 302     695           UT Martin 2016
+#&gt; 303     704                UTEP 2016
+#&gt; 304     536               UTRGV 2016
+#&gt; 305     706                UTSA 2016
+#&gt; 306     732                Utah 2016
+#&gt; 307     731            Utah St. 2016
+#&gt; 308   30024         Utah Valley 2016
+#&gt; 309     740                 VCU 2016
+#&gt; 310     741                 VMI 2016
+#&gt; 311     735          Valparaiso 2016
+#&gt; 312     736          Vanderbilt 2016
+#&gt; 313     738             Vermont 2016
+#&gt; 314     739           Villanova 2016
+#&gt; 315     746            Virginia 2016
+#&gt; 316     742       Virginia Tech 2016
+#&gt; 317     748              Wagner 2016
+#&gt; 318     749         Wake Forest 2016
+#&gt; 319     756          Washington 2016
+#&gt; 320     754      Washington St. 2016
+#&gt; 321     758           Weber St. 2016
+#&gt; 322     768       West Virginia 2016
+#&gt; 323     769       Western Caro. 2016
+#&gt; 324     771        Western Ill. 2016
+#&gt; 325     772         Western Ky. 2016
+#&gt; 326     774       Western Mich. 2016
+#&gt; 327     786      William &amp; Mary 2016
+#&gt; 328     792            Winthrop 2016
+#&gt; 329     796           Wisconsin 2016
+#&gt; 330    2915             Wofford 2016
+#&gt; 331     810          Wright St. 2016
+#&gt; 332     811             Wyoming 2016
+#&gt; 333     812              Xavier 2016
+#&gt; 334     813                Yale 2016
+#&gt; 335     817      Youngstown St. 2016</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

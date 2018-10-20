@@ -46,3 +46,14 @@ reference:
     contents:
     - sport_df
     - year_df
+    - cfb_play_type_df
+    - cfb_conf_types_df
+  - title: College Football (CFB) Functions - D1
+    contents:
+    - cfb_team_roster_data
+    - cfb_pbp_data
+    - cfb_conf_team
+    - cfb_team_talent
+    - cfb_game_info
+    - .cfb_team_game_by_game
+    - .cfb_team_season

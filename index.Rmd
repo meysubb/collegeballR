@@ -24,19 +24,24 @@ This is not on CRAN, you can install it from github.
 This package should be functional for all sports except for Football. The next update should have full functionality for Football as well.
 
 There are three main functions that provide data of interest:    
-(1) team_stats = Overall team stats (either per season or per game)   
-(2) player_stats = All player stats (either per season or per game)     
-(3) team_schedule = Team Schedule/Result/Site/Record   
+(1) team_stats = Overall team stats (either per season or per game)    
+(2) player_stats = All player stats (either per season or per game)      
+(3) team_schedule = Team Schedule/Result/Site/Record    
 
 For all other functions navigate to the refrence page found online. (add link later)
+
+### In Progress
+
+These are functions/sports that are currently available. I just have some higher hopes for the family of functions, there.    
+(1) College Football Functionality.     
+(2) Play by Play data - For CFB only right now.      
 
 ### Future Work 
 
 I'm looking to add functionality. What you can expect:       
-(1) College Football Functionality.    
-(2) Attendance (per game/season avg)      
-(3) Play by Play data (as available)      
-(4) Weekly Rankings       
-(5) Recruiting Details   
+(1) Attendance (per game/season avg)    
+(2) Weekly Rankings       
+(3) Recruiting Details   
+(4) EPA Work for CFB PBP    
 
 If you'd like to suggest anything (can be sport specific or general), create a github issue. Or tweet at me [@msubbaiah1](https://twitter.com/msubbaiah1).

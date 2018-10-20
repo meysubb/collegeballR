@@ -14,9 +14,19 @@
 
 
 team_stats <- function(team_id,year,sport,by="season"){
+  if(nchar(sport)==3){
+    sport <- sport_df[which(sport == sport_df$names),"id"]
+  }
   if(tolower(by)=="game"){
-    ret_dat <- .team_game(team_id,year,sport)
+    if(sport=="MFB"){
+      ret_dat <- .cfb_team_game_by_game(team_id,year,sprt="MFB")
+    }else{
+      ret_dat <- .team_game(team_id,year,sport)
+    }
   }else if(tolower(by) == "season"){
+    if(sport=="MFB"){
+      ret_dat <- .cfb_team_season(team_id,year,sprt="MFB")
+    }
     ret_dat <- .team_season_stats(team_id,year,sport)
   }else{
     stop("Pick Season or Game parameter for Teams.")

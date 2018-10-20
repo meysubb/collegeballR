@@ -20,9 +20,9 @@ Returns a dataframe of stats for all players by game
 in a specific sport and year.
 }
 \examples{
-player_game(697,2016,"MBB")
+.player_game(697,2016,"MBB")
 
-player_game(697,2015,"Womens Soccer")
+.player_game(697,2015,"Womens Soccer")
 
 }
 \keyword{internal}
