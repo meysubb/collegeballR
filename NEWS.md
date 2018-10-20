@@ -6,14 +6,14 @@ output: html_document
 # collegeballR 0.2.0
 
 - Added basic College Football functionality
-- Functions cover: 
-  (1) Play-By-Play   
-  (2) Drives   
-  (3) Team Roster   
-  (4) Team Stats - Season   
-  (5) Team Stats - Game by Game   
-  (6) Team talent rankings   
-  (7) General Game Info  
+- Functions cover:   
+  (1) Play-By-Play     
+  (2) Drives     
+  (3) Team Roster      
+  (4) Team Stats - Season     
+  (5) Team Stats - Game by Game     
+  (6) Team talent rankings     
+  (7) General Game Info    
 
 
 # collegeballR 0.1.1

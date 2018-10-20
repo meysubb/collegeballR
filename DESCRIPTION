@@ -1,7 +1,7 @@
 Package: collegeballR
 Type: Package
 Title: Scrape NCAA (College) stats 
-Version: 0.1.1
+Version: 0.2.0
 Authors@R: person("Meyappan","Subbaiah",role=c("aut","cre"),email = "meysubb@gmail.com")
 Maintainer: Meyappan Subbaiah <meysubb@gmail.com>
 Description: Scrapes NCAA stats for most college sports from stats.ncaa.org
@@ -18,7 +18,8 @@ Imports:
     xml2,
     foreach,
     jsonlite,
-    assertthat
+    assertthat,
+    stringr
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 RoxygenNote: 6.1.0
