@@ -65,6 +65,8 @@ cfb_game_info <- function(year,
       url <-
         paste0(play_base_url, "week=", week, "&conference=", conference)
     }
+  }else{
+    url <- play_base_url
   }
   game_df <- fromJSON(url)
   return(game_df)
