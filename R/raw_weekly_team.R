@@ -35,7 +35,7 @@
   raw_week_df <- foreach(i = 1:nrow(df), .combine='rbind') %do% {
     #setTxtProgressBar(pb, i)
     team_url <- paste0("http://stats.ncaa.org",df$href[i])
-    team_names <- read_html(team_url) %>% html_nodes(".heading td") %>% html_text() %>% trimws()
+    team_names <- read_html(team_url) %>% html_nodes(".mytable .heading td") %>% html_text() %>% trimws()
     ind <- which(team_names == t_name)
     team_tbls <- read_html(team_url) %>% html_nodes(".mytable") %>% html_table()
     res_df <- team_tbls[[ind+1]]
