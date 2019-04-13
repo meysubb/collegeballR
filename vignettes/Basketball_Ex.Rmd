@@ -44,7 +44,7 @@ Let's bring all the data into one dataframe for all teams.
 sec_player_l <- sec_player_stats %>% select(player_df) %>% pull()
 
 sec_player_df <- rbindlist(sec_player_l,fill=T) 
-colnames(sec_player_df)[c(19,23)] <- c("PPG","RPG")
+colnames(sec_player_df)[c(20,21)] <- c("PPG","RPG")
 sec_player_df <- sec_player_df %>% inner_join(.,sec) %>% select(-G,-team_id)
 ```
 
@@ -53,7 +53,7 @@ Note to self, look at all sport player sites and see if Average is repeated more
 
 ```{r}
 sec_player_df <- sec_player_df %>% mutate(
-  MP = as.numeric(gsub("\\:.*","",MP)),
+  MP = as.numeric(gsub("\\:.*","",MP))
 )
 
 sec_player_df[,c("FGM","FGA","DRebs","Tot Reb")] <- sapply(sec_player_df[,c("FGM","FGA","DRebs","Tot Reb")],as.numeric)

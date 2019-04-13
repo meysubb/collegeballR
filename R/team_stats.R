@@ -15,6 +15,9 @@
 
 team_stats <- function(team_id,year,sport,by="season"){
   if(nchar(sport)>=4){
+    sport = tolower(sport)
+    sport = gsub("'","",sport)
+    sport = stringr::str_replace_all(sport, "[^[:alnum:]]", " ")
     sport <- sport_df[which(sport == sport_df$names),"id"]
   }
   if(tolower(by)=="game"){
