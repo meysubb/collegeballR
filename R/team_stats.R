@@ -14,7 +14,7 @@
 
 
 team_stats <- function(team_id,year,sport,by="season"){
-  if(nchar(sport)==3){
+  if(nchar(sport)>=4){
     sport <- sport_df[which(sport == sport_df$names),"id"]
   }
   if(tolower(by)=="game"){
