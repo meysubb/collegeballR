@@ -55,7 +55,7 @@ cfb_pbp_data <- function(year,
                "&week=",
                week,
                "&playType=",
-               pt_id)
+               play_type)
     } else if (is.null(team)) {
       # no team, play_type
       full_url <-
@@ -80,7 +80,7 @@ cfb_pbp_data <- function(year,
           "&team=",
           URLencode(team, reserved = T),
           "&playType=",
-          pt_id
+          play_type
         )
     }
   }
