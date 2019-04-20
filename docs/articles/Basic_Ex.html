@@ -166,8 +166,8 @@
 <h3 class="hasAnchor">
 <a href="#team-mappings" class="anchor"></a>Team Mappings</h3>
 <p>The team mapping function helps identify the team_id associated with specific teams for different sports. This is vital to know when using <code>player_stats</code> or <code>team_stats</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">teams &lt;-<span class="st"> </span><span class="kw"><a href="../reference/team_mapping.html">team_mapping</a></span>(<span class="dv">2016</span>,<span class="st">"Men's Basketball"</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(teams,<span class="dv">6</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">teams &lt;-<span class="st"> </span><span class="kw"><a href="../reference/team_mapping.html">team_mapping</a></span>(<span class="dv">2016</span>,<span class="st">"Men's Basketball"</span>)
+<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(teams,<span class="dv">6</span>)</code></pre></div>
 <table class="table huxtable">
 <col>
 <col>
@@ -213,13 +213,13 @@
 <h3 class="hasAnchor">
 <a href="#team-stats" class="anchor"></a>Team Stats</h3>
 <p>Let’s look at a quick example for the Texas A&amp;M Women’s Soccer team.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">tamu_ws &lt;-<span class="st"> </span><span class="kw"><a href="../reference/team_stats.html">team_stats</a></span>(<span class="dv">697</span>, <span class="dv">2015</span>, <span class="st">"Women's Soccer"</span>,<span class="dt">by=</span><span class="st">"Season"</span>)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">table2 &lt;-<span class="st"> </span><span class="kw">huxtable</span>(tamu_ws,<span class="dt">add_colnames =</span> T) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="st">  </span>theme_article <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="st">  </span><span class="kw">set_top_border</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="kw">caption</span>(table2) &lt;-<span class="st"> "Table 2. TAMU Women's Soccer 2015"</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="kw">wrap</span>(table2) &lt;-<span class="st"> </span><span class="ot">TRUE</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7">table2</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tamu_ws &lt;-<span class="st"> </span><span class="kw"><a href="../reference/team_stats.html">team_stats</a></span>(<span class="dv">697</span>, <span class="dv">2015</span>, <span class="st">"Women's Soccer"</span>,<span class="dt">by=</span><span class="st">"Season"</span>)
+table2 &lt;-<span class="st"> </span><span class="kw">huxtable</span>(tamu_ws,<span class="dt">add_colnames =</span> T) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>theme_article <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">set_top_border</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)
+<span class="kw">caption</span>(table2) &lt;-<span class="st"> "Table 2. TAMU Women's Soccer 2015"</span>
+<span class="kw">wrap</span>(table2) &lt;-<span class="st"> </span><span class="ot">TRUE</span>
+table2</code></pre></div>
 <table class="table huxtable">
 <caption style="caption-side: top; text-align: center;">Table 2. TAMU Women's Soccer 2015</caption>
 <col>
@@ -334,13 +334,13 @@
 <h3 class="hasAnchor">
 <a href="#player-stats" class="anchor"></a>Player Stats</h3>
 <p>Here is a simple example of how to extract player stats, you can navigate to the other vignette for a more advanced example using purrr.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">tamu_p_mbb &lt;-<span class="st"> </span><span class="kw"><a href="../reference/player_stats.html">player_stats</a></span>(<span class="dv">697</span>, <span class="dv">2015</span>, <span class="st">"MBB"</span>,<span class="dt">by=</span><span class="st">"Season"</span>)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">table3 &lt;-<span class="st"> </span><span class="kw">huxtable</span>(tamu_p_mbb,<span class="dt">add_colnames =</span> T) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="st">  </span>theme_article <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="st">  </span><span class="kw">set_top_border</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="kw">caption</span>(table3) &lt;-<span class="st"> "Table 3. TAMU Men's Basketball 2015 - Player Stats"</span></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="kw">wrap</span>(table3) &lt;-<span class="st"> </span><span class="ot">TRUE</span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">table3</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tamu_p_mbb &lt;-<span class="st"> </span><span class="kw"><a href="../reference/player_stats.html">player_stats</a></span>(<span class="dv">697</span>, <span class="dv">2015</span>, <span class="st">"MBB"</span>,<span class="dt">by=</span><span class="st">"Season"</span>)
+table3 &lt;-<span class="st"> </span><span class="kw">huxtable</span>(tamu_p_mbb,<span class="dt">add_colnames =</span> T) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>theme_article <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">set_top_border</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)
+<span class="kw">caption</span>(table3) &lt;-<span class="st"> "Table 3. TAMU Men's Basketball 2015 - Player Stats"</span>
+<span class="kw">wrap</span>(table3) &lt;-<span class="st"> </span><span class="ot">TRUE</span>
+table3</code></pre></div>
 <table class="table huxtable">
 <caption style="caption-side: top; text-align: center;">Table 3. TAMU Men's Basketball 2015 - Player Stats</caption>
 <col>
