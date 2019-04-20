@@ -2,7 +2,8 @@ Package: collegeballR
 Type: Package
 Title: Scrape NCAA (College) stats 
 Version: 0.2.0
-Authors@R: person("Meyappan","Subbaiah",role=c("aut","cre"),email = "meysubb@gmail.com")
+Authors@R: c(person("Meyappan","Subbaiah",role=c("aut","cre"),email = "meysubb@gmail.com"),
+ person("Ryan", "Lindholm", email = "ryan.lindholm@outlook.com", role = c("ctb")))
 Maintainer: Meyappan Subbaiah <meysubb@gmail.com>
 Description: Scrapes NCAA stats for most college sports from stats.ncaa.org
 Depends: 
