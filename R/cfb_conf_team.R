@@ -20,7 +20,7 @@ cfb_conf_team <- function(conference) {
   }else{
     assert_that(conference  %in%  cfb_conf_types_df$short_name,msg="Incorrect conference selection, potential misspelling")
     ind <- which(conference == cfb_conf_types_df$short_name)
-    url <- paste0(base_url,conf_types_df$abbreviation[ind])
+    url <- paste0(base_url,cfb_conf_types_df$abbreviation[ind])
   }
   df <- fromJSON(url)
   return(df)
